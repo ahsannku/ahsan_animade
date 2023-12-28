@@ -1,0 +1,39 @@
+.example-mark {
+  width: 2px;
+}
+
+.example-mark.example-mark-active {
+  background: url("/assets/images/head.png") no-repeat center center;
+  width: 49px;
+  height: 23px;
+}
+
+.example-mark.example-mark-completed {
+  background: linear-gradient(
+    286deg,
+    rgba(199, 0, 37, 1) 8%,
+    rgba(249, 187, 83, 1) 89%
+  );
+}
+
+.example-thumb.active {
+  background-color: grey;
+}
+
+.example-track {
+  position: relative;
+  background-color: #2e2931;
+}
+
+.example-track.example-track-0 {
+  background: linear-gradient(
+    286deg,
+    rgba(199, 0, 37, 1) 8%,
+    rgba(249, 187, 83, 1) 89%
+  );
+}
+
+.vertical-slider .example-track {
+  left: 23px;
+  width: 2px;
+}
