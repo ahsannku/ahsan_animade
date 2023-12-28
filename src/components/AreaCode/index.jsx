@@ -37,6 +37,7 @@ const AreaCode = ({ data, setData }) => {
         <ul className='absolute top-8 border-2  z-[1000] bg-white max-h-[350px] overflow-x-hidden text-base w-[200px] overflow-y-auto'>
           {countriesCodes.map((country, i) => (
             <li
+            style={data.code !== country.dial_code?{color:"rgb(20 14 24 / 1"}:{}}
               className={`cursor-pointer text-sm hover:bg-[#f2f2f2] ${
                 data.code === country.dial_code ? 'bg-black text-white' : ""
               }`}
