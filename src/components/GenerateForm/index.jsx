@@ -21,30 +21,30 @@ const GenerateForm = ({
       ...data,
       extraWords: extraWords.split(",").map((word) => word.trim()), // Split the extra words into an array and trim whitespace
     };
-    const requestDatadec = {
-      decrement_value: data.samples, // Assuming 'samples' contains the number you want to send
-    };
+    // const requestDatadec = {
+    //   decrement_value: data.samples, // Assuming 'samples' contains the number you want to send
+    // };
     // Add a new field "generatedSamples" to the requestData object
     requestData.generatedSamples = requestData.samples || 1; // Use "samples" value as the number of generated samples, default to 1 if not available
     // const tokenWithQuotes = localStorage.getItem("token");
-    const token = "fddf";
+    // const token = "fddf";
 
-    if (token) {
-      // Make the POST request to www.test.com/test with the requestData
-      fetch(
-        " https://animade-production.up.railway.app/api/decrease-designs/",
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-            Authorization: `Token ${JSON.parse(localStorage.getItem("token"))}`, // Include the authorization header
-          },
-          body: JSON.stringify(requestDatadec),
-        }
-      ).catch((error) => {
-        console.error("Error sending POST request:", error);
-      });
-    }
+    // if (token) {
+    //   // Make the POST request to www.test.com/test with the requestData
+    //   fetch(
+    //     " https://animade-production.up.railway.app/api/decrease-designs/",
+    //     {
+    //       method: "POST",
+    //       headers: {
+    //         "Content-Type": "application/json",
+    //         Authorization: `Token ${JSON.parse(localStorage.getItem("token"))}`, // Include the authorization header
+    //       },
+    //       body: JSON.stringify(requestDatadec),
+    //     }
+    //   ).catch((error) => {
+    //     console.error("Error sending POST request:", error);
+    //   });
+    // }
     onSubmit(requestData);
   };
   return (
