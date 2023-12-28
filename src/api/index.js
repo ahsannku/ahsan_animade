@@ -15,10 +15,10 @@ api.interceptors.response.use((response) => {
   return response;
 }, (err) => {
   if (err?.response.status === 401 && err?.response.data.detail === 'Invalid token.') {
-    // localStorage.removeItem('token');
-    // window.location.href = '/login';
+    localStorage.removeItem('token');
+    window.location.href = '/login';
   }
-  return Promise.reject(err);
+  else return Promise.reject(err);
 });
 
 export default api;
