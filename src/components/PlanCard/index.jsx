@@ -23,7 +23,7 @@ const PlanCard = ({
 
   const handleChoosePlan = async () => {
     try {
-      const token = localStorage.getItem('token');
+      const token = JSON.parse(localStorage.getItem("token"));
       if(!token){
         toast.error('Please login to upgrade.', {
           position: toast.POSITION.TOP_RIGHT,
