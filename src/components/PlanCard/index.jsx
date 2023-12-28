@@ -23,7 +23,8 @@ const PlanCard = ({
 
   const handleChoosePlan = async () => {
     try {
-      if(!localStorage.getItem('token')){
+      const token = localStorage.getItem('token');
+      if(!token){
         toast.error('Please login to upgrade.', {
           position: toast.POSITION.TOP_RIGHT,
           className: "toast__fiy",
@@ -31,9 +32,13 @@ const PlanCard = ({
         return;
       }
       setloading(true);
-      const { data } = await api.post("https://animade-production.up.railway.app/paymentlinks/", {
-        price_id: priceId,
-      });
+      const { data } = await api.post(
+        "https://animade-production.up.railway.app/paymentlinks/",
+        {
+          price_id: priceId,
+        },
+        { headers: { Authorization: token } }
+      );
       console.log(data);
       toast.success('Payment session created. You will be navigated to complete checkout', {
         position: toast.POSITION.TOP_RIGHT,
