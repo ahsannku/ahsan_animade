@@ -91,7 +91,7 @@ const Banner = () => {
                 className="bg-transparent text-white mb-8 outline-none border border-[#8A738A] w-full px-4 py-3 rounded-lg "
               />
 
-              <button disabled={loading} onClick={handleAskAi} className="flex items-center px-4 py-3 w-32 rounded-lg mb-4 hover:text-primary  hover:bg-transparent border-2 border-primary duration-300 font-bold  bg-primary text-white">
+              <button style={{border: '2px solid rgb(199 0 37 / 1)'}} disabled={loading} onClick={handleAskAi} className="flex items-center justify-center px-4 py-3 w-32 rounded-lg mb-4 hover:text-primary hover:bg-transparent border-2 border-primary duration-300 font-bold  bg-primary text-white">
                 Ask AI
                 {
                   loading && <span className="spinner"></span>

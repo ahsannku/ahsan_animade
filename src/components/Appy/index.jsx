@@ -101,7 +101,8 @@ const Appy = () => {
                 </div>
               </div>
               <div className="flex justify-end items-center ">
-                <button className=" px-4 py-3 bg-primary  hover:text-primary  hover:bg-transparent border-2 border-primary duration-500 font-bold rounded-lg text-white">
+            
+                <button style={{border: '2px solid rgb(199 0 37 / 1)'}} className=" px-4 py-3 bg-primary  hover:text-primary  hover:bg-transparent border-2 border-primary duration-500 font-bold rounded-lg text-white">
                   Make this image a product
                 </button>
               </div>

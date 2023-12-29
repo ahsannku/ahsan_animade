@@ -114,13 +114,14 @@ const Header = () => {
           </ul>
           <a
             href="/register"
+            style={{border: '2px solid rgb(199 0 37 / 1)'}}
             className="border-primary border-2 btn-md hover:bg-primary hover:text-white duration-500 font-bold hidden tablet:flex order-3"
           >
             Sign Up
           </a>
         </div>
         <div className="flex tablet:hidden order-3 ">
-          <a href="/register">
+          <a href="/register" >
             <img src={user} alt="" />
           </a>
         </div>

@@ -93,7 +93,7 @@ const Accordion = ({ items }) => {
             </div>
             {activeIndex === index && (
               <div
-                style={{ color: "white" }}
+                style={{fontFamily:'Satoshi,sans-serif' }}
                 className="bg-[#253236] px-5 pb-5"
               >
                 {item.description}

@@ -39,6 +39,7 @@ const Mano = () => {
             </p>
             <a
               href=""
+              style={{border: '2px solid rgb(199 0 37 / 1)'}}
               className="hover:text-primary   hover:bg-transparent border-2 border-primary duration-300  p-5 rounded-lg w-3/4 bg-primary text-center justify-center text-white text-base flex items-center font-semibold "
             >
               Try with 30 FREE designs monthly
