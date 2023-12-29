@@ -73,6 +73,7 @@ export default function ContactUs() {
               {...register("name")}
               id="name"
               placeholder="Enter full name"
+              style={{border:"1px solid rgb(125 137 146 / 1)"}}
               className="bg-[#353B40] rounded-r-lg rounded-bl-lg px-10 py-5  border border-[#7D8992] w-full placeholder:text-[15px] placeholder:font-light"
             />
             <svg
@@ -109,6 +110,7 @@ export default function ContactUs() {
             <input
               {...register("number")}
               id="number"
+              style={{border:"1px solid rgb(125 137 146 / 1)"}}
               placeholder="Enter phone number"
               className="bg-[#353B40] rounded-r-lg rounded-bl-lg px-10 py-5  border border-[#7D8992] w-full placeholder:text-[15px] placeholder:font-light"
             />
@@ -146,6 +148,7 @@ export default function ContactUs() {
             <input
               {...register("email")}
               id="email"
+              style={{border:"1px solid rgb(125 137 146 / 1)"}}
               placeholder="Enter email address"
               className="bg-[#353B40] rounded-r-lg rounded-bl-lg px-10 py-5  border border-[#7D8992] w-full placeholder:text-[15px] placeholder:font-light"
             />
@@ -190,6 +193,7 @@ export default function ContactUs() {
             <textarea
               {...register("message")}
               id="message"
+              style={{border:"1px solid rgb(125 137 146 / 1)"}}
               placeholder="Type your message..."
               className="bg-[#353B40] rounded-r-lg rounded-bl-lg px-4 py-4  border border-[#7D8992] w-full placeholder:text-[15px] placeholder:font-light"
             />
