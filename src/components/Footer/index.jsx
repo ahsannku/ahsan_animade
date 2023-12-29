@@ -5,7 +5,7 @@ import Logo from "/assets/logo.png";
 const Footer = () => {
   return (
     <footer className="custom-container mt-14 overflow-x-hidden z-50 relative">
-      <div className="flex justify-center tablet:justify-between gap-6 border-b border-paraColor pb-4 tablet:pb-0 tablet:border-0 items-center flex-col tablet:flex-row">
+      <div style={{color:"rgb(255 255 255 / 1)!important", fontFamily:'Satoshi,sans-serif'}} className="flex justify-center tablet:justify-between gap-6 border-b border-paraColor pb-4 tablet:pb-0 tablet:border-0 items-center flex-col tablet:flex-row">
         <Link to="/" className="w-40">
           <img src={Logo} alt="logo" />
         </Link>
@@ -26,10 +26,10 @@ const Footer = () => {
           <p className="opacity-60">Copyright 2023. All rights reserved by Animade</p>
         </div>
         <div className="flex justify-center items-center gap-8  ">
-          <NavLink to="/privacy" className="">
+          <NavLink to="/privacy" className="opacity-60">
             Privacy Policy
           </NavLink>
-          <NavLink to="/privacy" className="">
+          <NavLink to="/privacy" className="opacity-60">
             Terms & Conditions
           </NavLink>
         </div>

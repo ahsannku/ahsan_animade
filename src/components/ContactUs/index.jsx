@@ -197,7 +197,7 @@ export default function ContactUs() {
 
           <button
             type="submit"
-            className="bg-primary hover:text-primary  hover:bg-transparent border-2 border-primary duration-300 font-bold   w-1/2 px-6 py-5 rounded-lg font-body text-base"
+            className="bg-primary hover:text-primary text-center  hover:bg-transparent border-2 border-primary duration-300 font-bold   w-1/2 px-6 py-5 rounded-lg font-body text-base"
           >
             Send Message
           </button>
