@@ -88,7 +88,7 @@ const OutputCard = ({ isSelected, image }) => {
   return (
     <>
       <div
-        className={`h-[250px] cursor-pointer rounded-xl overflow-hidden ${isSelected ? 'border border-[#FFFFFF]' : ""}`}
+        className={`h-[250px] w-[250px] cursor-pointer rounded-xl overflow-hidden ${isSelected ? 'border border-[#FFFFFF]' : ""}`}
       >
         <img src={image || Image} alt="" onClick={handleImageClick} />
       </div>

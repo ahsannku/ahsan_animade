@@ -36,6 +36,16 @@ const UserAccountLimit = () => {
     navigate("/pricing", { state: { fromApp: true } });
   };
 
+  const getUserDesigns = () => {
+    if(!userData?.designs_remaining){
+      return 0;
+    }
+    if(userData?.designs_remaining < 0){
+      return 'Unlimited';
+    }
+    return userData?.designs_remaining;
+  }
+
   return (
     <div className="flex flex-col md:flex-row lg:items-center gap-1 md:gap-3">
       <Link
@@ -46,7 +56,7 @@ const UserAccountLimit = () => {
       </Link>
       <div className="flex items-center ">
         <span className="design">
-          {userData?.designs_remaining || 0} designs
+          {getUserDesigns()} designs
         </span>
         <div className="flex items-center">
           <span className="design">

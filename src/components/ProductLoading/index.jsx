@@ -12,6 +12,7 @@ const ProductLoading = () => {
   const [loading, setloading] = useState(false);
   const [processedProducts, setProcessedProducts] = useState(0);
   const _queuedProducts = useSelector((state) => state.printful?.queuedProducts ?? []);
+  const token = useSelector(state => state.auth.token);
   const queuedProducts = useMemo(() => {
     return _queuedProducts.map(p => {
       return {...p, sync_product: {...p?.sync_product, external_id: p?.sync_product?.product_id}}
@@ -26,9 +27,9 @@ const ProductLoading = () => {
       for (let i = 0; i < queuedProducts.length; i++) {
         const product = queuedProducts[i];
         await axios
-          .post(`https://api.printful.com/store/products?store_id=${appConstants.printfulStoreId}`, product, {
+          .post(`https://animade-production.up.railway.app/cproduct/`, product, {
             headers: {
-              Authorization: `Bearer ${appConstants.printfulApiKey}`,
+              Authorization: `Token ${token}`,
             },
           })
           .then((res) => {

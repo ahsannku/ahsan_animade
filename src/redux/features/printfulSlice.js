@@ -80,9 +80,7 @@ const printful = createSlice({
     builder.addCase(getPrintfulproduct.fulfilled, (state, action) => {
       state.error = false;
       state.loading = false;
-      // console.log("get product: ========>>>>>>>", action.payload);
-
-      state.products = action.payload.result;
+      state.products = action.payload.api_data.result;
     });
     builder.addCase(getPrintfulproduct.rejected, (state, action) => {
       state.loading = false;
@@ -118,7 +116,7 @@ const printful = createSlice({
     builder.addCase(getSinglePrintfulProduct.fulfilled, (state, action) => {
       state.loading = false;
       state.error = false;
-      state.singleProduct = action.payload.result;
+      state.singleProduct = action.payload.api_data.result;
     });
     builder.addCase(getSinglePrintfulProduct.rejected, (state, action) => {
       state.loading = false;

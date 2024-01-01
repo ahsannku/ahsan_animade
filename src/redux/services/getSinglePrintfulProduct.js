@@ -8,13 +8,14 @@ export const getSinglePrintfulProduct = createAsyncThunk(
     const { rejectWithValue } = thunkAPI;
     const globalState = thunkAPI.getState((state) => state);
     const newApiKey = appConstants.printfulApiKey
+    const token = thunkAPI.getState().auth.token;
 
     try {
-      const { data } = await axios.get(
-        `https://api.printful.com/products/${id}`,
+      const { data } = await axios.post(
+        `https://animade-production.up.railway.app/get_single_product/`, {id},
         {
           headers: {
-            Authorization: `Bearer ${newApiKey}`,
+            Authorization: `Token ${token}`,
           },
         }
       );
