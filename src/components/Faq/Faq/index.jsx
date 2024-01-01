@@ -3,33 +3,61 @@ import { Accordion } from "../..";
 const Faq = () => {
   const accordianData = [
     {
-      title: "How can I reset my password?",
+      title: "How do I Cancel my Subscription",
       description:
-        "It can’t help but hear a pin drop from over half a mile away, so it lives deep in the mountains where there aren’t many people or Pokémon.It was born from sludge on the ocean floor. In a sterile environment, the germs within its body can’t multiply, and it dies.It has no eyeballs, so it can’t see. It checks its surroundings via the ultrasonic waves it emits from its mouth.",
+        `To cancel a subscription, just message our support and let us know. You can
+        contact us on the contact-us form on our site, or via email at
+        animade.world@gmail.com.
+        `,
       delay: "300",
     },
     {
-      title: "Can I create more that one account?",
+      title: "How can I Upgrade my Plan?",
       description:
-        "It can’t help but hear a pin drop from over half a mile away, so it lives deep in the mountains where there aren’t many people or Pokémon.It was born from sludge on the ocean floor. In a sterile environment, the germs within its body can’t multiply, and it dies.It has no eyeballs, so it can’t see. It checks its surroundings via the ultrasonic waves it emits from its mouth.",
+        `Visit this page to upgrade your plan. We have many packages to suit all of your
+        needs!`,
       delay: "600",
     },
     {
-      title: " How can I subscribe to monthly newsletter?",
+      title: "What makes a good prompt?",
       description:
-        "It can’t help but hear a pin drop from over half a mile away, so it lives deep in the mountains where there aren’t many people or Pokémon.It was born from sludge on the ocean floor. In a sterile environment, the germs within its body can’t multiply, and it dies.It has no eyeballs, so it can’t see. It checks its surroundings via the ultrasonic waves it emits from its mouth.",
+        `Be creative and let your imagination run wild. We find that a good prompt is
+        imaginative and detailed, with clear descriptive words. You should also specify
+        the style, and experiment to see what works best!`,
       delay: "900",
     },
     {
-      title: "Do you store credit card information securely?",
+      title: "What is Printful?",
       description:
-        "It can’t help but hear a pin drop from over half a mile away, so it lives deep in the mountains where there aren’t many people or Pokémon.It was born from sludge on the ocean floor. In a sterile environment, the germs within its body can’t multiply, and it dies.It has no eyeballs, so it can’t see. It checks its surroundings via the ultrasonic waves it emits from its mouth.",
+        `Printful is a Print-On-Demand provider that prints and ships orders directly to
+        your customers worldwide. Printful allows you to create E-Commerce products
+        with no upfront cost, connecting to over 20 stores including Shopify, Etsy and
+        Amazon.`,
+      description2: "Learn more button (affiliate link)",
       delay: "1200",
     },
     {
-      title: " What payment systems to you work with?",
+      title: "How do I create a Printful Account?",
       description:
-        "It can’t help but hear a pin drop from over half a mile away, so it lives deep in the mountains where there aren’t many people or Pokémon.It was born from sludge on the ocean floor. In a sterile environment, the germs within its body can’t multiply, and it dies.It has no eyeballs, so it can’t see. It checks its surroundings via the ultrasonic waves it emits from its mouth.",
+        `Follow this link and Sign Up to start your journey`,
+      description2: "Affiliate Link",
+      delay: "1500",
+    },
+    {
+      title: "How do I Link my Animade and Printful Accounts?",
+      description:
+        `Once you have signed up, as part of the product creation process on Animade,
+        you will be prompted to link your Printful account. For more information on the
+        product creation process, see the how-it-works page`,
+      delay: "1500",
+    },
+    {
+      title: "How do I Create a Store on Printful?",
+      description:
+        `Log in to your Printful account, go to the side menu in your Dashboard, and click
+        Stores > Choose platform to see your options and find a platform that suits your
+        needs. Simple as that! You can then customise your store to connect with your
+        target audience.`,
       delay: "1500",
     },
   ];

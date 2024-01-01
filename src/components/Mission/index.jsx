@@ -49,6 +49,7 @@ const Mission = () => {
               <NavLink to={"/about-us"}>
                 <a
                   href=""
+                  style={{border: '2px solid rgb(199 0 37 / 1)'}}
                   className="btn-lg hover:text-primary  hover:bg-transparent border-2 border-primary duration-300 bg-primary text-center justify-center text-white text-base flex items-center font-semibold "
                 >
                   More About Us

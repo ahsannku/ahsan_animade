@@ -189,7 +189,7 @@ const PlanCard = ({
           </div>{" "}
         </div>
 
-       {state?.fromApp && <button disabled={loading} onClick={handleChoosePlan} style={{paddingLeft:"0px"}} className="btn-md bg-primary w-full hover:text-primary  hover:bg-transparent border-2 border-primary duration-300 font-bold"
+       {state?.fromApp && <button disabled={loading} onClick={handleChoosePlan} style={{border: '2px solid rgb(199 0 37 / 1)', paddingLeft:"0px"}} className="btn-md bg-primary w-full hover:text-primary  hover:bg-transparent border-2 border-primary duration-300 font-bold"
         >
           Choose Plan
         </button>}

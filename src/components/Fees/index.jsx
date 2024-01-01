@@ -49,6 +49,7 @@ const Fees = () => {
                 your plan as you grow.
               </p>
               <a
+                style={{border: '2px solid rgb(199 0 37 / 1)'}}
                 href=""
                 className="flex justify-around items-center bg-primary rounded-lg py-2 hover:text-primary  hover:bg-transparent border-2 border-primary duration-300"
               >

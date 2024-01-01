@@ -200,6 +200,7 @@ export default function ContactUs() {
           </div>
 
           <button
+            style={{border: '2px solid rgb(199 0 37 / 1)'}}
             type="submit"
             className="bg-primary hover:text-primary text-center  hover:bg-transparent border-2 border-primary duration-300 font-bold   w-1/2 px-6 py-5 rounded-lg font-body text-base"
           >

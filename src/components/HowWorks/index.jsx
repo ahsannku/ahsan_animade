@@ -46,6 +46,7 @@ const HowWorks = () => {
               <div className="flex justify-center items-center flex-col gap-6 w-full mt-6 px-4 py-8">
                 <a
                   href=""
+                  style={{border: '2px solid rgb(199 0 37 / 1)'}}
                   className="btn-lg hover:text-primary  hover:bg-transparent border-2 border-primary duration-300 bg-primary text-center justify-center text-white text-base flex items-center font-semibold "
                 >
                   How it works{" "}
@@ -53,6 +54,7 @@ const HowWorks = () => {
                 </a>
                 <a
                   href=""
+                  style={{border: '2px solid rgb(199 0 37 / 1)'}}
                   className="btn-lg bg-primary hover:text-primary  hover:bg-transparent border-2 border-primary duration-300 text-center text-white justify-center text-base flex items-center font-semibold "
                 >
                   Sign Up Free now{" "}
