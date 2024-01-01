@@ -214,6 +214,21 @@
   .layout {
     @apply relative flex min-h-screen;
   }
+  .layout::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-size: auto;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-image: url('/assets/star-bg\ 3.png'); /* Replace 'your-image-url.jpg' with the actual URL or path of your image */
+    transform: scaleY(-1); /* Flip horizontally */
+    z-index: -1; /* Send the pseudo-element to the background */
+  }
 }
 
 /* SPECIAL DESIGN FOR THE LINK IN THE USERLAYOUT  */

@@ -1,7 +1,8 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import PropTypes from "prop-types";
 import api from "../../api";
 import { toast } from "react-toastify";
+import { useLocation } from "react-router-dom";
 
 const PlanCard = ({
   title,
@@ -16,6 +17,8 @@ const PlanCard = ({
 }) => {
   const [accordionVisible, setAccordionVisible] = useState(false);
   const [loading, setloading] = useState(false);
+
+  const {state} = useLocation();
 
   const toggleAccordion = () => {
     setAccordionVisible(!accordionVisible);
@@ -156,7 +159,7 @@ const PlanCard = ({
                 {designs} Designs Monthly
               </p>
             </div>
-            <div className="flex items-center gap-3 mb-2">
+            {/* <div className="flex items-center gap-3 mb-2">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="20"
@@ -182,14 +185,14 @@ const PlanCard = ({
               <p className="font-medium text-sm capitalize">
                 24/7 Customer Support
               </p>
-            </div>{" "}
+            </div>{" "} */}
           </div>{" "}
         </div>
 
-        <button disabled={loading} onClick={handleChoosePlan} style={{paddingLeft:"0px"}} className="btn-md bg-primary w-full hover:text-primary  hover:bg-transparent border-2 border-primary duration-300 font-bold"
+       {state?.fromApp && <button disabled={loading} onClick={handleChoosePlan} style={{paddingLeft:"0px"}} className="btn-md bg-primary w-full hover:text-primary  hover:bg-transparent border-2 border-primary duration-300 font-bold"
         >
           Choose Plan
-        </button>
+        </button>}
       </div>
     </div>
   );

@@ -1,9 +1,11 @@
 import React, { useEffect, useState } from "react";
 import { RocketIcon } from "../../icons";
 import Button from "../Button";
+import { useNavigate, Link } from "react-router-dom";
 
 const UserAccountLimit = () => {
   const [userData, setUserData] = useState(null);
+  const navigate = useNavigate();
 
   useEffect(() => {
     const tokenWithQuotes = localStorage.getItem("token");
@@ -28,11 +30,20 @@ const UserAccountLimit = () => {
         });
     }
   }, []);
+
+  const handleUpgradeClick = (e) => {
+    e.preventDefault();
+    navigate("/pricing", { state: { fromApp: true } });
+  };
+
   return (
     <div className="flex flex-col md:flex-row lg:items-center gap-1 md:gap-3">
-      <Button to="/pricing" className={"w-fit"}>
+      <Link
+        onClick={handleUpgradeClick}
+        className={`w-fit hover:bg-white hover:text-custom-red hover:border-custom-red drop-button`}
+      >
         Upgrade
-      </Button>
+      </Link>
       <div className="flex items-center ">
         <span className="design">
           {userData?.designs_remaining || 0} designs

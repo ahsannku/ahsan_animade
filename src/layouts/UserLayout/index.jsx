@@ -25,11 +25,14 @@ const UserLayout = ({ noHeader }) => {
     <div
       className={`layout`}
       style={{
-        backgroundImage: `url(${bgImage})`,
-        backgroundSize: "auto",
-        backgroundPosition: "bottom",
-        backgroundRepeat: "no-repeat",
-        backgroundAttachment: "fixed",
+        // backgroundImage: `url(${bgImage})`,
+        // backgroundSize: "auto",
+        // backgroundPosition: "bottom",
+        // backgroundRepeat: "no-repeat",
+        // backgroundAttachment: "fixed",
+        // backgroundT
+        // transform: scaleY(-1)
+        // filter: 'invert(1)'
       }}
     >
       <Sidebar />

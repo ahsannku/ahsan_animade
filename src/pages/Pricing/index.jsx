@@ -9,6 +9,7 @@ const Pricing = () => {
   useEffect(() => {
     AOS.init();
   });
+  
   return (
     <>
       <Header />
