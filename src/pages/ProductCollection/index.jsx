@@ -37,7 +37,6 @@ const ProductCollection = () => {
       setSelectedItem(item);
       setIsEdit(true);
       dispatch(getSinglePrintfulProduct(item.id));
-      // setOpenModal(true);
       console.log("selected item ", item);
     } else {
       toast.error("No design selected for product creation.",{

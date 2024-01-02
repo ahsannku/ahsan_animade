@@ -34,7 +34,10 @@ const SignUp = () => {
       [id]: e.target.value,
     });
   };
-  // console.log(data.code);
+
+  // useEffect(() => {
+  //   console.log('error changed', error)
+  // }, [error])
 
   const usernameError = error?.response?.data?.username;
 
@@ -54,11 +57,7 @@ const SignUp = () => {
             await dispatch(register(data)).then((res) => {
               if (!res?.error) {
                 console.log("this condition is running", res.error)
-                // setTimeout(() => {
-                //   navigate("/vertify-number", { state: { username: data.username } });
-                // }, 1000);
                 navigate('/vertify-number', {state: {username: data.username}})
-
               }
             });
             

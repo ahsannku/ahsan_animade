@@ -27,9 +27,14 @@ export const register = createAsyncThunk(
       customAlert("Registered Successfully!", "success");
       return res.data;
     } catch (error) {
-      customAlert(
-        "Enter a valid username. This value may contain only letters, numbers, and @/./+/-/_ characters."
-      );
+      let err = error?.response?.data?.error;
+      if(!err){
+        err = error?.response?.data?.username?.[0];
+      }
+      if(!err){
+        err = 'Something went wrong.'
+      }
+      customAlert(err);
       console.log(error)
       return rejectWithValue(error);
     }
