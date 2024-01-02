@@ -1,23 +1,29 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { IoIosArrowBack } from "react-icons/io";
 import { useDispatch, useSelector } from "react-redux";
 import Input from "../Input";
 import ProductCreationFooter from "../ProductCreationFooter";
 import SelectComponent from "../SelectComponent";
 import { toast } from "react-toastify";
-import { addQueuedProduct } from "../../redux/features/printfulSlice";
+import { addQueuedProduct, clearSinglePrintfulProduct } from "../../redux/features/printfulSlice";
 import { useNavigate } from "react-router-dom";
 import { generateUUID } from "../../utils/uuid";
 
-const ListingDialogue = ({ singleProduct, setOpenModal, designForProductCreation = null }) => {
+const ListingDialogue = ({ singleProduct, closeListingDialogue = () => {}, designForProductCreation = null }) => {
   const [selectedVariants, setSelectedVariants] = useState([]);
   const [variantPrice, setVariantPrice] = useState("");
   const { product, variants } = singleProduct;
-  const { image, title, type } = product;
+  const { image = '', title = '', type = '' } = product;
 
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const [data, setData] = useState({});
+
+  useEffect(() => {
+    return () => {
+      dispatch(clearSinglePrintfulProduct())
+    }
+  }, []);
 
   const productCreationHandler = () => {
     if(designForProductCreation){
@@ -79,14 +85,14 @@ const ListingDialogue = ({ singleProduct, setOpenModal, designForProductCreation
   };
 
   const leftBtnClicked = () => {
-    setOpenModal(false);
+    closeListingDialogue();
   };
 
   return (
     <div className=" w-full px-[50px] py-4">
       <div className="flex items-center">
         <div className=" h-full flex items-center w-[80px] border-r-[1px] border-[#FFFFFF]">
-          <button className="" onClick={() => setOpenModal(false)}>
+          <button className="" onClick={() => closeListingDialogue()}>
             <IoIosArrowBack fontSize={40} />
           </button>
         </div>

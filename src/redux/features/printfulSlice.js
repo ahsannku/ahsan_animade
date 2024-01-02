@@ -48,6 +48,9 @@ const printful = createSlice({
     },
     clearAllProducts: (state, action) => {
       state.queuedProducts = [];
+    },
+    clearSinglePrintfulProduct: (state, action) => {
+      state.singleProduct = {};
     }
   },
   extraReducers: (builder) => {
@@ -168,6 +171,6 @@ const printful = createSlice({
   },
 });
 
-export const { setSelectedDeigns, setSelectedDesignForProduct, addQueuedProduct, deleteQueuedProduct, editQueuedProduct, clearAllProducts } =
+export const { setSelectedDeigns, setSelectedDesignForProduct, clearSinglePrintfulProduct, addQueuedProduct, deleteQueuedProduct, editQueuedProduct, clearAllProducts } =
  printful.actions;
 export default printful.reducer;

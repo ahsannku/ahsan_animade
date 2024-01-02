@@ -24,14 +24,20 @@ const ProductCollection = () => {
 
   useEffect(() => {
     dispatch(getPrintfulproduct());
-  }, [] )
+  }, [] );
+
+  useEffect(() => {
+    if(singleProduct?.product){
+      setOpenModal(true);
+    }
+  }, [singleProduct]);
 
   const handleCardClick = (item) => {
     if(selectedDesignForProductCreation){
       setSelectedItem(item);
       setIsEdit(true);
       dispatch(getSinglePrintfulProduct(item.id));
-      setOpenModal(true);
+      // setOpenModal(true);
       console.log("selected item ", item);
     } else {
       toast.error("No design selected for product creation.",{
@@ -40,6 +46,10 @@ const ProductCollection = () => {
       });
     }
   };
+
+  const closeListingDialogue = () => {
+    setOpenModal(false);
+  }
 
   const handleSearchChange = (value) => {
     setSearchitem(value);
@@ -91,7 +101,7 @@ const ProductCollection = () => {
           <div className="text-base z-[100] bg-[#2c3135] rounded-lg h-[95%] border w-[90%] xl:w-[70%] text-center md:text-2xl overflow-scroll">
             <ListingDialogue
               singleProduct={singleProduct}
-              setOpenModal={setOpenModal}
+              closeListingDialogue={closeListingDialogue}
               designForProductCreation={selectedDesignForProductCreation}
             />
           </div>
