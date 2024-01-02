@@ -14,6 +14,8 @@ import { printfulAuth } from "../../redux/services/printfulAuth";
 import { textToImage } from "../../redux/services/textToImage";
 import ProductCreationFooter from "../../components/ProductCreationFooter";
 import { setSelectedDeigns } from "../../redux/features/printfulSlice";
+import { toast } from "react-toastify";
+import { customAlert } from "../../utils/alert2";
 
 const SingleInput = () => {
   const [selectedDesigns, setSelectedDesigns] = useState([]);
@@ -75,14 +77,15 @@ const SingleInput = () => {
 
 
   const handleUploadProducts = () => {
-    // Prepare your data here
-    const selectedDesignsData = {
-      selectedDesigns: selectedDesigns,
-      // Other data if needed
-    };
+    customAlert('Please Create or Select the designs you want on your products', 'success');
+    // // Prepare your data here
+    // const selectedDesignsData = {
+    //   selectedDesigns: selectedDesigns,
+    //   // Other data if needed
+    // };
 
-    // Navigate to the Upload Products screen with the data as route state
-    navigate("/choose-products", { state: selectedDesignsData });
+    // // Navigate to the Upload Products screen with the data as route state
+    // navigate("/choose-products", { state: selectedDesignsData });
   };
 
   const toggleCardSelection = (image) => {
