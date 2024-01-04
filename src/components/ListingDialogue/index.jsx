@@ -13,7 +13,14 @@ const ListingDialogue = ({ singleProduct, closeListingDialogue = () => {}, desig
   const [selectedVariants, setSelectedVariants] = useState([]);
   const [variantPrice, setVariantPrice] = useState("");
   const { product, variants } = singleProduct;
-  const { image = '', title = '', type = '' } = product;
+  // const { image = '', title = '', type = '' } = product;
+
+  // console.log(variants)
+  useEffect(() => {
+    if(!product){ 
+      closeListingDialogue();
+    }
+  }, [product]);
 
   const dispatch = useDispatch();
   const navigate = useNavigate();
@@ -105,7 +112,7 @@ const ListingDialogue = ({ singleProduct, closeListingDialogue = () => {}, desig
       <div className="flex flex-col gap-5 my-5">
         <div className="flex gap-5 h-[250px] lg:h-[300px]">
           <img
-            src={image}
+            src={product?.image}
             alt=""
             className=" h-[300px] lg:h-[300px] rounded-3xl border-[3px] border-[#7b63ab]"
           />
@@ -139,15 +146,15 @@ const ListingDialogue = ({ singleProduct, closeListingDialogue = () => {}, desig
 
         <div className="flex gap-5">
           <div className="h-[162px] w-[30%] flex flex-col px-6 justify-center rounded-[20px] border-[3px] border-[#7B63AB]">
-            <h2 className="text-xl lg:text-[20px] font-bold">{type}</h2>
-            <h4 className="text-sm lg:text-[20px]">{title}</h4>
+            <h2 className="text-xl lg:text-[20px] font-bold" style={{textTransform: 'capitalize'}}>{product?.type?.toLowerCase()}</h2>
+            <h4 className="text-sm lg:text-[17px] font-normal">{product?.title}</h4>
           </div>
 
           <div className="w-[70%] h-[162px] rounded-[20px] px-[20px] py-[5px] border-[3px] border-[#7B63AB] flex items-center justify-between ">
             <div className="flex flex-col  w-[70%] items-start">
               <label className="text-[20px] font-bold">Variants </label>
               <div className="h-[98px] flex flex-wrap mt-2 overflow-scroll">
-                {variants.map((item, index) => (
+                {variants?.length > 0 &&  variants?.map((item, index) => (
                   <div
                     key={index}
                     className={`w-[40px] h-[40px] rounded-[5px] mx-[5px] my-[5px]`}
