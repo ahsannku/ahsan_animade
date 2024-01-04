@@ -5,7 +5,7 @@ import "./slider.css";
 const Slider = ({ onChange, currentIndex }) => {
   return (
     <ReactSlider
-      className="vertical-slider"
+      className="vertical-slider mx-2"
       markClassName="example-mark"
       onChange={onChange}
       trackClassName="example-track"

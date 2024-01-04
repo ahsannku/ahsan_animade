@@ -179,7 +179,7 @@ const SingleInput = () => {
               className={"w-fit"}
               onClick={handleUploadProducts}
             >
-              Choose Your Platform
+              Create Your Products
             </Button>
             </div>
           ) : (

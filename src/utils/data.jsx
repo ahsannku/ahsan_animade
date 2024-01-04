@@ -526,16 +526,16 @@ export const conditonsList8 = [
 ]
 
 export const settingsLinks = [
-  {
-    label: "Payment & Billing",
-    to: "payment",
-    icon: PaymentIcon,
-  },
-  {
-    label: "Manage Accounts",
-    to: "manage-account",
-    icon: ManageIcon,
-  },
+  // {
+  //   label: "Payment & Billing",
+  //   to: "payment",
+  //   icon: PaymentIcon,
+  // },
+  // {
+  //   label: "Manage Accounts",
+  //   to: "manage-account",
+  //   icon: ManageIcon,
+  // },
   {
     label: "Change Password",
     to: "change-password",
@@ -552,11 +552,11 @@ export const plans = [
   {
     title: "Booster",
     subtitle: "Take your business off the ground",
-    designs: 100,
+    designs: 80,
     extra: 50,
     image: "/assets/images/booster-plan.png",
-    price: 4.99,
-    price_id: "price_1ORqlqD8hSRNHIz90cYe9idU", // replace with ids from production
+    price: 5.99,
+    price_id: "price_1OMsveFVH5IGSSzhazbPGp7n", // replace with ids from production
     // href: "https://buy.stripe.com/test_6oE9AA2bEaJ02LC8wB",
     // href: "https://buy.stripe.com/test_dR67t74rH9tE1e8dQQ",
     delay: "200",
@@ -564,10 +564,10 @@ export const plans = [
   {
     title: "Accelerate",
     subtitle: "Reach new heights",
-    designs: 850,
+    designs: 280,
     extra: 250,
-    price: 19.99,
-    price_id: "price_1ORqlqD8hSRNHIz90cYe9idU", // replace with ids from production
+    price: 24.99,
+    price_id: "price_1NagvgFVH5IGSSzhRqUd4OEJ", // replace with ids from production
     image: "/assets/images/accelarator-plan.png",
     href: "https://buy.stripe.com/test_28o000bMeeZgdqg3ci",
     delay: "400",
@@ -575,10 +575,10 @@ export const plans = [
   {
     title: "Turbocharge",
     subtitle: "Some serious power",
-    designs: 3050,
+    designs: 880,
     extra: 850,
-    price: 39.99,
-    price_id: "price_1ORqlqD8hSRNHIz90cYe9idU", // replace with ids from production
+    price: 49.99,
+    price_id: "price_1OMt5fFVH5IGSSzh0NV1EHyX", // replace with ids from production
     image: "/assets/images/Turbocharge-plan.png",
     href: "https://buy.stripe.com/test_dR6cMM9E62cu9a07sz",
     delay: "600",
@@ -588,8 +588,8 @@ export const plans = [
     subtitle: "Unlimited potential",
     designs: "unlimited",
     extra: "unlimited",
-    price: 99.99,
-    price_id: "price_1ORqlqD8hSRNHIz90cYe9idU", // replace with ids from production
+    price: 149.99,
+    price_id: "price_1NagyWFVH5IGSSzhy2KZtSnY", // replace with ids from production
     image: "/assets/images/professional-plan.png",
     Professional: true,
     href: "https://buy.stripe.com/test_cN2dQQ9E62cu1Hy8wE",
@@ -1874,3 +1874,5 @@ export const routeToMetaInfo = {
     description: `Sign in to create AI designs for products on your e-commerce stores`,
   },
 };
+
+export const default_negative_prompt = '(child:1.5), ((((underage)))), ((((child)))), (((kid))), (((preteen))), (teen:1.5) ugly, tiling, poorly drawn hands, poorly drawn feet, poorly drawn face, out of frame, extra limbs, disfigured, deformed, body out of frame, bad anatomy, watermark, signature, cut off, low contrast, underexposed, overexposed, bad art, beginner, amateur, distorted face, blurry, draft, grainy'

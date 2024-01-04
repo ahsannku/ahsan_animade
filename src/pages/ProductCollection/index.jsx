@@ -62,13 +62,14 @@ const ProductCollection = () => {
       (item) => item.type_name.toLowerCase().includes(searchitem.toLowerCase())
     )
   : products;
-
+// console.log('displayedProducts')
+// console.log(displayedProducts)
 
   return (
     <>
       <div className="px-8 mt-5">
         <ProductCreationHeader type="collection" onSearchChange={handleSearchChange} />
-        <div className="my-[50px] flex flex-wrap justify-center gap-x-[20px] w-full">
+        <div className="my-[50px] flex flex-wrap justify-center gap-x-[25px] w-full">
           {loading ? (
             <span className="special-spinner h-24 w-24"></span>
           ) : (
@@ -76,7 +77,7 @@ const ProductCollection = () => {
             displayedProducts.map((item, index) => {
               return (
                 <div
-                  className={`my-[33px] w-[333px] h-[424px] p-4 rounded-[10px] ${
+                  className={`my-[33px] w-[349px] h-[424px] p-4 rounded-[10px] ${
                     selectedItem && selectedItem.id === item.id
                       ? "border-2 border-[#FFFFFF]"
                       : ""
@@ -113,6 +114,7 @@ const ProductCollection = () => {
           leftBtnText="Go Back"
           rightBtnText=" Select Store"
           leftBtnClickHandler={() => navigate(-1)}
+          rightBtnEnable={false}
           clearSelectionHandler={() => {
             setSelectedItem(null);
             setIsEdit(false);

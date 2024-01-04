@@ -8,9 +8,9 @@ import { useDispatch } from "react-redux";
 import { addCreatedDesign } from "../../redux/services/addsaveddesigns";
 
 const Outputo = ({ isSelected, data , toggleCardSelection}) => {
-  console.log('====================================');
-  console.log(data);
-  console.log('====================================');
+  // console.log('====================================');
+  // console.log(data);
+  // console.log('====================================');
   const {image} = data;
   const [selected, setSelected] = useState(isSelected);
   const [isPopupOpen, setPopupOpen] = useState(false);  
@@ -63,7 +63,7 @@ const Outputo = ({ isSelected, data , toggleCardSelection}) => {
   return (
     <>
       <div
-        className={`${styles.card} ${selected ? styles.selected : ""}`}
+        className={`${styles.card} ${selected ? styles.selected : ""} h-[250px] w-[250px]`}
         onClick={() =>toggleCardSelection(data)}
       >
       <div className={styles.downloadButton}>

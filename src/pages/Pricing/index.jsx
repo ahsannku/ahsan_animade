@@ -6,10 +6,13 @@ import { useEffect } from "react";
 import Particle from "../../components/Particle";
 
 const Pricing = () => {
+
+  const token = localStorage.getItem('token')
+
   useEffect(() => {
     AOS.init();
   });
-  
+
   return (
     <>
       <Header />
@@ -20,12 +23,9 @@ const Pricing = () => {
         <div className="custom-container flex flex-col items-center relative z-50">
           <div className="laptop:w-[860px] text-center" data-aos="fade-left">
             <h1 className="text-center laptop:text-5xl tablet:text-4xl my-6 text-white text-2xl">
-              Launch your business into the Stratosphere & scale up with
-              AI-Powered Products.
+              Launch your business into the Stratosphere & scale up with AI-Powered Products.
             </h1>
-            <p className=" text-xl font-medum text-[#B6B4B7]">
-              First 50 monthly designs on us and cancel anytime.
-            </p>
+            <p className=" text-xl font-medum text-[#B6B4B7]">First 30 Monthly Designs on us, and cancel anytime.</p>
           </div>
           <div>
             <div className="grid grid-cols-1 mobile:grid-cols-2 laptop:grid-cols-4 gap-4 pt-20 pb-10">
@@ -46,8 +46,10 @@ const Pricing = () => {
               ))}
             </div>
             <p className="font-bold text-sm bg-primary  bg-opacity-40 py-4 px-6 rounded-lg text-center">
-              Additionally, we take payment as 3% of your sales on Printful - So
-              you only pay us as you earn and scale
+              {token
+                ? `Additionally, we take payment as 3% of your sales on Printful - So
+              you only pay us as you earn and scale`
+                : `Create an account or sign in to choose a plan`}
             </p>
           </div>
         </div>

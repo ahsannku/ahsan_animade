@@ -107,7 +107,7 @@ const ListingDialogue = ({ singleProduct, closeListingDialogue = () => {}, desig
           <img
             src={image}
             alt=""
-            className="w-[30%] rounded-3xl border-[3px] border-[#7b63ab]"
+            className=" h-[300px] lg:h-[300px] rounded-3xl border-[3px] border-[#7b63ab]"
           />
 
           <div className="w-[70%] rounded-[20px] px-[20px] py-[10px] border-[3px] border-[#7B63AB]">

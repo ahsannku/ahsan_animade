@@ -39,9 +39,10 @@ const ProductCreationHeader = ({ type, onSearchChange }) => {
       </div>
 
       {type === "product" ? (
-        <button className="flex py-2.5 px-4 justify-center items-center gap-2.5 flex-shrink-0 text-base lg:text-lg bg-[#7B63AB] rounded-[15px]">
-          Create New Product
-        </button>
+        <span></span>
+        // <button className="flex py-2.5 px-4 justify-center items-center gap-2.5 flex-shrink-0 text-base lg:text-lg bg-[#7B63AB] rounded-[15px]">
+        //   Create New Product
+        // </button>
       ) : (
         <div className=" flex items-center text-black">
           <input

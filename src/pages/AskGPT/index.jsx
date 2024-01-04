@@ -13,6 +13,7 @@ import {
 import { aiModels } from "../../redux/services/aiModels";
 import { getCreatedDesigns } from "../../redux/services/getCreatedDesigns";
 import { textToImage } from "../../redux/services/textToImage";
+import { customAlert } from "../../utils/alert2";
 
 const AskGPT = () => {
   const [selectedDesigns, setSelectedDesigns] = useState([]);
@@ -28,14 +29,16 @@ const AskGPT = () => {
   const navigate = useNavigate();
 
   const handleUploadProducts = () => {
-    // Prepare your data here
-    const selectedDesignsData = {
-      selectedDesigns: selectedDesigns,
-      // Other data if needed
-    };
+    customAlert('Please Create or Select the designs you want on your products', 'success');
 
-    // Navigate to the Upload Products screen with the data as route state
-    navigate("/choose-products", { state: selectedDesignsData });
+    // Prepare your data here
+    // const selectedDesignsData = {
+    //   selectedDesigns: selectedDesigns,
+    //   // Other data if needed
+    // };
+
+    // // Navigate to the Upload Products screen with the data as route state
+    // navigate("/choose-products", { state: selectedDesignsData });
   };
 
   const { access_token, products, loadind } = useSelector(
@@ -114,7 +117,7 @@ const AskGPT = () => {
   return (
     <>
       <div>
-        <h3 className="text-lg lg:text-2xl font-bold mb-2">Ask GPT-4 for some help</h3>
+        <h3 className="text-lg lg:text-2xl font-bold mb-2">Ask AI for some help generating prompts</h3>
         <div className={'flex flex-col md:flex-row gap-4'}>
           <div className={'max-w-[600px] w-[100%]'}>
             <GenerateForm
@@ -202,7 +205,7 @@ const AskGPT = () => {
       </div>
       <FooterBtns>
         <div className="ml-auto">
-          <Button type={'button'} className={'w-fit'} onClick={handleUploadProducts}>Choose Your Platform</Button>
+          <Button type={'button'} className={'w-fit'} onClick={handleUploadProducts}>Create Your Products</Button>
         </div>
       </FooterBtns>
     </>

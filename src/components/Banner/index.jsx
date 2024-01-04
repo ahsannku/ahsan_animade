@@ -3,6 +3,7 @@ import Appy from "../Appy";
 import axios from "axios";
 import config from "../../config";
 import { toast } from "react-toastify";
+import { default_negative_prompt } from "../../utils/data";
 
 const extraWords = "in 8 words maximum each describe four scenes in a json array exactly like this [scenedescribed1, scenedescribed2, scenedescribed3, scenedescribed4] where the four scenes include this phrase:";
 
@@ -94,7 +95,7 @@ const Banner = () => {
         model_id: "sdxl",
         safety_checker: "yes",
         safety_checker_type	:"blur",
-        negative_prompt: prompt,
+        negative_prompt: default_negative_prompt,
         width: '512',
         height: '512',
         // samples: 4,

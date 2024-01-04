@@ -11,6 +11,7 @@ const ProductCreationFooter = ({
   rightBtnClickHandler,
   clearSelectionHandler,
   isLoading,
+  rightBtnEnable = true
 }) => {
   const [confirmBox, setConfirmBox] = useState(false);
 
@@ -29,14 +30,15 @@ const ProductCreationFooter = ({
         </button>
         <div className="relative">
           {selected === "collection" && edit === true ? (
-            <button
-              className="flex w-[190px] h-[30px] py-2.5 px-4 justify-center items-center gap-2.5 flex-shrink-0 text-lg bg-[#434344] rounded-[10px]"
-              onClick={() => {
-                setConfirmBox(true);
-              }}
-            >
-              Clear Selection
-            </button>
+            <></>
+            // <button
+            //   className="flex w-[190px] h-[30px] py-2.5 px-4 justify-center items-center gap-2.5 flex-shrink-0 text-lg bg-[#434344] rounded-[10px]"
+            //   onClick={() => {
+            //     setConfirmBox(true);
+            //   }}
+            // >
+            //   Clear Selection
+            // </button>
           ) : null}
           {confirmBox && (
             <div className="absolute flex bottom-14 text-black left-[-30px] p-2 w-[280px] bg-white border border-gray-400 rounded-md">
@@ -61,12 +63,12 @@ const ProductCreationFooter = ({
           </span>
         ) : null}
 
-        <button
+     {rightBtnEnable &&   <button
           className="flex w-[190px] h-[30px] py-2.5 px-4 justify-center items-center gap-2.5 flex-shrink-0 text-lg bg-[#C70025] rounded-[10px]"
           onClick={rightBtnClickHandler}
         >
           {rightBtnText}
-        </button>
+        </button>}
       </div>
     </div>
   );

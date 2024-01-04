@@ -1,6 +1,7 @@
 import { createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios";
 import config from "../../config";
+import { default_negative_prompt } from "../../utils/data";
 
 // Define your Django backend URL
 const STABLE_URL = "https://animade-production.up.railway.app/api/image_to_image/";
@@ -18,7 +19,7 @@ const token = tokenWithQuotes.replace(/"/g, ""); // Remove quotes
         prompt: data.prompt,
         safety_checker: "yes",
         safety_checker_type	:"blur",
-        negative_prompt: null,
+        negative_prompt: default_negative_prompt,
         init_image: data.init_image,
         width: "512",
         height: "512",

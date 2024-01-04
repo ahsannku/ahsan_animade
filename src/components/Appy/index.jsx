@@ -5,6 +5,14 @@ import Slider from "./Slider";
 import Form from "./Form";
 import "./styles.css";
 
+const videos = [
+  "https://animade-ten.vercel.app/assets/videos/about-video.mp4",
+  "https://animade-ten.vercel.app/assets/videos/about-video.mp4",
+  "https://animade-ten.vercel.app/assets/videos/about-video.mp4",
+  "https://animade-ten.vercel.app/assets/videos/about-video.mp4",
+  "https://animade-ten.vercel.app/assets/videos/about-video.mp4",
+];
+
 const Appy = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
@@ -34,21 +42,29 @@ const Appy = () => {
           <Slider onChange={_handleIndexChange} currentIndex={currentIndex} />
           <div className="flex tablet:flex-row flex-col">
             <div className="form-container tablet:ml-8 ml-0  ">
-              <Form
-                currentIndex={currentIndex}
-                handleNext={_handleNext}
-                handleComplete={_handleComplete}
-              />
+              <Form currentIndex={currentIndex} handleNext={_handleNext} handleComplete={_handleComplete} />
             </div>
+            {/*  */}
             <div className="flex flex-col justify-center items-center">
-              <div className="flex justify-center">
+              <div className="laptop:w-[280px] w-full sm:p-0 p-5 aos-init aos-animate" data-aos="fade-right" data-aos-duration="1000">
+                <div className="player" style={{ width: "100%", height: "100%", padding:'0.3em', margin:'0.1em' }}>
+                  <video
+                    key={currentIndex}
+                    src={videos[currentIndex]}
+                    autoPlay={true}
+                    muted={true}
+                    style={{ width: "100%", height: "100%" }}
+                  />
+                </div>
+              </div>
+              {/* <div className="flex justify-center">
                 <img
                   src="/assets/images/stepper-bg.png"
                   className="tablet:w-full w-3/4"
                   alt=""
                 />
               </div>
-              <div className="relative mb-4 w-60    flex ">
+              <div className="relative mb-4 w-60 flex">
                 <input
                   type="text"
                   className="px-2 py-3  border  border-primary bg-[#1C1521] rounded-lg  outline-none w-full text-white"
@@ -101,12 +117,12 @@ const Appy = () => {
                 </div>
               </div>
               <div className="flex justify-end items-center ">
-            
                 <button style={{border: '2px solid rgb(199 0 37 / 1)'}} className=" px-4 py-3 bg-primary  hover:text-primary  hover:bg-transparent border-2 border-primary duration-500 font-bold rounded-lg text-white">
                   Make this image a product
                 </button>
-              </div>
+              </div> */}
             </div>
+            {/*  */}
           </div>
         </div>
       </div>

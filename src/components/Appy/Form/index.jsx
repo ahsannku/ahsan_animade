@@ -10,7 +10,7 @@ const formEls = [
 ];
 const Form = ({ currentIndex, handleNext, handleComplete }) => {
   return (
-    <div className="form-container">
+    <div className="form-container px-10">
       <h3 className="flex items-center gap-x-4">
         <span className="bg-[#2E2931] text-white rounded-full text-base px-3 py-[8px] ">
           {" "}
