@@ -40,7 +40,7 @@ const PlanCard = ({
         {
           price_id: priceId,
         },
-        { headers: { Authorization: token } }
+        { headers: { Authorization: `Token ${token}` } }
       );
       console.log(data);
       toast.success('Payment session created. You will be navigated to complete checkout', {
