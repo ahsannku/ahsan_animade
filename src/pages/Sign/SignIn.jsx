@@ -80,6 +80,7 @@ const SignIn = () => {
                   errorMsg={userNameMsg}
                   required={true}
                   value={data?.username || ""}
+                  inputClassName="w-full"
                 />
                 <Input
                   placeholder="Password"
@@ -88,6 +89,7 @@ const SignIn = () => {
                   value={data.password || ""}
                   error={error?.response?.data?.password}
                   required={true}
+                  inputClassName="w-4/5"
                 />
               </div>
               <button

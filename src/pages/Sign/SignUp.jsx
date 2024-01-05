@@ -73,6 +73,7 @@ const SignUp = () => {
                 errorMsg={userNameMsg}
                 required={true}
                 value={data?.username || ""}
+                inputClassName="w-full"
               />
               <Input
                 type="number"
@@ -84,6 +85,7 @@ const SignUp = () => {
                 value={data?.phonenumber || ""}
                 setData={setData}
                 data={data}
+                inputClassName="w-full"
               />
             <Input
               placeholder="Your Email"
@@ -93,6 +95,8 @@ const SignUp = () => {
               errorMsg={emailMsg}
               required={true}
               value={data?.email || ""}
+              inputClassName="w-full"
+              // className={'mb-2'}
             />
             <Input
               placeholder="Password"
@@ -102,6 +106,7 @@ const SignUp = () => {
               errorMsg={passMsg}
               required={true}
               value={data?.password || ""}
+              inputClassName="w-4/5"
             />
             <Input
               placeholder="Confirm Password"
@@ -112,6 +117,7 @@ const SignUp = () => {
               errorMsg={confirmPassMsg}
               required={true}
               value={data?.confirmpassword || ""}
+              inputClassName="w-4/5"
             />
           </div>
           <button

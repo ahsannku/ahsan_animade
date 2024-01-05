@@ -14,6 +14,7 @@ const Input = ({
   data,
   setData,
   className,
+  inputClassName = ''
 }) => {
   const [hide, setHide] = useState(true);
   const [inputBlur, setInputBlur] = useState(false);
@@ -67,14 +68,18 @@ const Input = ({
         }}
         required={required}
         value={value || ""}
+        className={inputClassName}
       />
       {error && (
         <p className={`absolute bottom-[-21px] text-[13px] `}>{error}</p>
       )}
       {!error && errorInput && errorMsg && (
-        <p
+         <p
+          className={`absolute top-0 left-0 p-[2px] px-[10px] bg-[#ffcccc] h-[fit-content] text-[#c70025] transform translate-y-[-100%] rounded-md text-left text-[12px]  capitalize`}
+          >
+        {/* <p
           className={`absolute top-0 left-0 p-[4px] px-[10px] bg-[#ffcccc] h-[fit-content] text-[#c70025] transform translate-y-[-130%] rounded-md text-left text-[12px]  capitalize`}
-        >
+        > */}
           {errorMsg}
         </p>
       )}
