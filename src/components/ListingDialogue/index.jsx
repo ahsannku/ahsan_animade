@@ -128,6 +128,7 @@ const ListingDialogue = ({ singleProduct, closeListingDialogue = () => {}, desig
                 className="text-left w-full"
                 onChange={(e) => inputChangeHandler(e, "itemName")}
                 value = {data?.itemName || ''}
+                inputClassName={'w-full'}
               />
             </div>
 

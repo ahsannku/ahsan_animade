@@ -30,7 +30,7 @@ const VerifyNumber = () => {
 
   console.log(username);
   const otp = otpValues.join("");
-  console.log("otp is : ", otp);
+  // console.log("otp is : ", otp);
   const data = {
     username,
     otp,
@@ -38,7 +38,6 @@ const VerifyNumber = () => {
 
   const handleOtpSubmit = async (e) => {
     e.preventDefault();
-    // console.log("verify submit is working")
     await dispatch(verifyOtp(data)).then((res) => {
       if (!res?.error) {
         setTimeout(() => {

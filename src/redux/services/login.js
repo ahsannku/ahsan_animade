@@ -26,11 +26,12 @@ export const login = createAsyncThunk(
       customAlert("Welcome to Animade!", "success");
       return res.data;
     } catch (error) {
-      customAlert(
-        error?.response?.data?.non_field_errors &&
-          error?.response?.data?.non_field_errors[0],
-        "error"
-      );
+      let err = error?.response?.data?.non_field_errors?.[0] ? error?.response?.data?.non_field_errors?.[0] :
+       error?.response?.data?.detail;
+       if(!err){
+        err = 'Something went wrong.'
+       }
+      customAlert(err, "error");
       return rejectWithValue(error);
     }
   }
