@@ -55,7 +55,7 @@ const Privacy = () => {
               currentActive !== 2 ? setCurrentActive(2) : setCurrentActive(null)
             }
           >
-            Terms & Conditions{" "}
+            Animade Terms & Conditions{" "}
           </button>
           {currentActive === 2 && (
             <div className="p-14 text-base font-light">
@@ -64,25 +64,24 @@ const Privacy = () => {
                 <p className="mb-4">
                   Welcome to Animade (
                   <a
-                    href="www.animade.world"
+                    href="https://www.animade.world"
                     target="_blank"
                     className="font-semibold text-[#3498db]"
                   >
                     www.animade.world
                   </a>
                   ), an online platform that enables users to produce and upload
-                  designs to non-fungible token (NFT) and Print-On-Demand
-                  platforms for the purposes of buying, selling, and showcasing.
-                  I am privileged to present to you this document which outlines
-                  the terms and conditions ("T&Cs") that govern the use of our
-                  platform.
+                  designs to Print-On-Demand (e-commerce) platforms for the
+                  purposes of buying, selling, and showcasing. I am privileged
+                  to present to you this document which outlines the terms and
+                  conditions ("T&Cs") that govern the use of our platform.
                 </p>
                 <p className="mb-4">
                   Throughout these terms and conditions, the expressions "we,"
                   "us,", “the platform” and "our" refer to Animade, while "you"
                   and "user" denote individuals who utilise our platform. By
                   utilising our platform, you enter into a legally binding
-                  agreement to comply with these T&Cs. It is crucial that you
+                  agreement to comply with these T&Cs. It is mandatory that you
                   carefully read and comprehend these terms before creating an
                   account with us. Should you find that you do not concur with
                   any of the conditions stipulated herein, we respectfully
@@ -95,12 +94,10 @@ const Privacy = () => {
                   promptly report any unauthorised use of your account. We
                   reserve the right to refuse service to any person, monitor
                   user activities on the platform, and collect and process data
-                  concerning user access and use of the platform. Furthermore,
-                  we reserve the right to impose a commission on your proceeds
-                  in exchange for utilising our services. In the event of any
-                  disputes with third-party providers, you, as a user, are
-                  responsible for resolving them and indemnifying and holding
-                  the platform harmless from any claims or damages.
+                  concerning user access and use of the platform. In the event
+                  of any disputes with third-party providers, you, as a user,
+                  are responsible for resolving them. The platform cannot be
+                  held responsible for any claims or damages.
                 </p>
                 <p className="mb-4">
                   We may display advertisements, use your data for marketing
@@ -133,11 +130,19 @@ const Privacy = () => {
                     <ol>
                       {conditonsList2.map((item, i) => (
                         <li key={i} className="pl-5 py-1">
-                          {item}
+                          {item?.text}
+                          {item?.array && (
+                            <ol>
+                              {item?.array.map((nestedItem, j) => (
+                                <li key={j}>{nestedItem}</li>
+                              ))}
+                            </ol>
+                          )}
                         </li>
                       ))}
                     </ol>
                   </li>
+
                   <li>
                     User Responsibilities
                     <ol>
@@ -153,7 +158,14 @@ const Privacy = () => {
                     <ol>
                       {conditonsList4.map((item, i) => (
                         <li key={i} className="pl-5 py-1">
-                          {item}
+                          {item?.text}
+                          {item?.array && (
+                            <ol>
+                              {item?.array.map((nestedItem, j) => (
+                                <li key={j}>{nestedItem}</li>
+                              ))}
+                            </ol>
+                          )}
                         </li>
                       ))}
                     </ol>
@@ -163,7 +175,14 @@ const Privacy = () => {
                     <ol>
                       {conditonsList5.map((item, i) => (
                         <li key={i} className="pl-5 py-1">
-                          {item}
+                          {item?.text}
+                          {item?.array && (
+                            <ol>
+                              {item?.array.map((nestedItem, j) => (
+                                <li key={j}>{nestedItem}</li>
+                              ))}
+                            </ol>
+                          )}
                         </li>
                       ))}
                     </ol>
@@ -173,7 +192,14 @@ const Privacy = () => {
                     <ol>
                       {conditonsList6.map((item, i) => (
                         <li key={i} className="pl-5 py-1">
-                          {item}
+                          {item?.text}
+                          {item?.array && (
+                            <ol>
+                              {item?.array.map((nestedItem, j) => (
+                                <li key={j}>{nestedItem}</li>
+                              ))}
+                            </ol>
+                          )}
                         </li>
                       ))}
                     </ol>
@@ -193,7 +219,14 @@ const Privacy = () => {
                     <ol>
                       {conditonsList8.map((item, i) => (
                         <li key={i} className="pl-5 py-1">
-                          {item}
+                          {item?.text}
+                          {item?.array && (
+                            <ol>
+                              {item?.array.map((nestedItem, j) => (
+                                <li key={j}>{nestedItem}</li>
+                              ))}
+                            </ol>
+                          )}
                         </li>
                       ))}
                     </ol>
@@ -205,29 +238,24 @@ const Privacy = () => {
                   as the legal agreement between Animade, the online platform
                   for design production and upload, and its users. By creating
                   an account on the platform, users agree to comply with the
-                  provisions set forth in these T&Cs. It is vital for users to
-                  read and comprehend these terms in full before proceeding with
-                  the use of the platform. The provisions include account
-                  creation and use, pricing and design packages, and the
-                  platform's right to impose a commission on user earnings,
-                  among others. Users are responsible for maintaining the
-                  security of their account and data, and the platform shall not
-                  be liable for any losses or damages resulting from a data
-                  breach. Any disputes shall be resolved in accordance with the
+                  provisions set forth in these T&Cs. It is mandatory for users
+                  to read and comprehend these terms in full before proceeding
+                  with the use of the platform. The provisions include account
+                  creation and use, pricing and design packages, among others.
+                  Any disputes shall be resolved in accordance with the
                   governing law and jurisdiction specified in the agreement.
                 </p>
                 <p className="mt-5">
                   Please contact us via email:{" "}
                   <a
-                    href="animade.world@gmail.com"
-                    target="_blank"
+                    href="mailto:animade.world@gmail.com"
                     className="font-semibold text-[#3498db]"
                   >
                     animade.world@gmail.com
                   </a>
                   , or on the ‘contact us’ form on our website
                   <a
-                    href="www.animade.world"
+                    href="https://www.animade.world"
                     target="_blank"
                     className="font-semibold text-[#3498db]"
                   >
@@ -265,10 +293,13 @@ const Privacy = () => {
                   It is important to note that this privacy policy should be
                   read in conjunction with our Terms and Conditions, which can
                   be accessed at{" "}
-                  <span className="underline text-blue-500 font-bold">
-                    https://animade.world/legal
-                  </span>
-                  .
+                  <a
+                    className="text-blue-500 font-bold"
+                    href="https://animade.world/legal"
+                    target="_blank"
+                  >
+                    https://animade.world/legal.
+                  </a>
                 </p>
               </div>
               <ol className="privacy_ol">
@@ -281,6 +312,19 @@ const Privacy = () => {
                         {item}
                       </li>
                     ))}
+                    <li>
+                      "Website" refers to the website that you are currently
+                      using,
+                      <a
+                        href="https://www.animade.world"
+                        target="_blank"
+                        className="text-blue-500 font-bold"
+                      >
+                        https://www.animade.world
+                      </a>
+                      , and any sub-domains of this site unless expressly
+                      excluded by their own terms and conditions.
+                    </li>
                   </ul>
                 </li>
                 <li>
@@ -441,9 +485,9 @@ const Privacy = () => {
                   loss or unauthorised access to your Data, please let us know
                   immediately by contacting us via this e-mail address:{" "}
                   <a
-                    href="animade.world@gmail.com"
+                    href="mailto:animade.world@gmail.com"
                     target="_blank"
-                    className="font-semibold text-blue-500"
+                    className="text-blue-500 font-bold"
                   >
                     animade.world@gmail.com
                   </a>
@@ -495,6 +539,7 @@ const Privacy = () => {
                     href="https://ico.org.uk/"
                     target="_blank"
                     rel="noreferrer"
+                    className="text-blue-500 font-bold"
                   >
                     https://ico.org.uk/
                   </a>
@@ -503,7 +548,7 @@ const Privacy = () => {
                 <li>
                   It is important that the Data we hold about you is accurate
                   and current. Please keep us informed if your Data changes
-                  during the period for which we hold it
+                  during the period for which we hold it.
                 </li>
                 <p className="font-bold">Links to Other Websites</p>
                 <li>
@@ -559,51 +604,55 @@ const Privacy = () => {
                 </li>
                 <li>This Website may place the following Cookies:</li>
                 <table className="table my-5">
-                  <tr>
-                    <th className="p-4">Type of Cookie</th>
-                    <th className="p-4">Purpose</th>
-                  </tr>
-                  <tr>
-                    <td className="p-2">Strictly necessary cookies</td>
-                    <td className="p-2">
-                      These are cookies that are required for the operation of
-                      our website. They include, for example, cookies that
-                      enable you to log into secure areas of our website, use a
-                      shopping cart or make use of e-billing services.
-                    </td>
-                  </tr>
-                  <tr>
-                    <td className="p-2">Analytical/performance cookies</td>
-                    <td className="p-2">
-                      They allow us to recognise and count the number of
-                      visitors and to see how visitors move around our website
-                      when they are using it. This helps us to improve the way
-                      our website works, for example, by ensuring that users are
-                      finding what they are looking for easily.
-                    </td>
-                  </tr>
-                  <tr>
-                    <td className="p-2">Functionality cookies</td>
-                    <td className="p-2">
-                      These are used to recognise you when you return to our
-                      website. This enables us to personalise our content for
-                      you, greet you by name and remember your preferences (for
-                      example, your choice of language or region). By using the
-                      Website, you agree to our placement of functionality
-                      cookie.
-                    </td>
-                  </tr>
-                  <tr>
-                    <td className="p-2">Targeting cookies</td>
-                    <td className="p-2">
-                      These cookies record your visit to our website, the pages
-                      you have visited and the links you have followed. We will
-                      use this information to make our website and the
-                      advertising displayed on it more relevant to your
-                      interests. We may also share this information with third
-                      parties for this purpose.
-                    </td>
-                  </tr>
+                  <thead>
+                    <tr>
+                      <th className="p-4">Type of Cookie</th>
+                      <th className="p-4">Purpose</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td className="p-2">Strictly necessary cookies</td>
+                      <td className="p-2">
+                        These are cookies that are required for the operation of
+                        our website. They include, for example, cookies that
+                        enable you to log into secure areas of our website, use
+                        a shopping cart or make use of e-billing services.
+                      </td>
+                    </tr>
+                    <tr>
+                      <td className="p-2">Analytical/performance cookies</td>
+                      <td className="p-2">
+                        They allow us to recognise and count the number of
+                        visitors and to see how visitors move around our website
+                        when they are using it. This helps us to improve the way
+                        our website works, for example, by ensuring that users
+                        are finding what they are looking for easily.
+                      </td>
+                    </tr>
+                    <tr>
+                      <td className="p-2">Functionality cookies</td>
+                      <td className="p-2">
+                        These are used to recognise you when you return to our
+                        website. This enables us to personalise our content for
+                        you, greet you by name and remember your preferences
+                        (for example, your choice of language or region). By
+                        using the Website, you agree to our placement of
+                        functionality cookie.
+                      </td>
+                    </tr>
+                    <tr>
+                      <td className="p-2">Targeting cookies</td>
+                      <td className="p-2">
+                        These cookies record your visit to our website, the
+                        pages you have visited and the links you have followed.
+                        We will use this information to make our website and the
+                        advertising displayed on it more relevant to your
+                        interests. We may also share this information with third
+                        parties for this purpose.
+                      </td>
+                    </tr>
+                  </tbody>
                 </table>
                 <li>
                   You can choose to enable or disable Cookies in your internet
@@ -617,7 +666,7 @@ const Privacy = () => {
                   You can choose to delete Cookies at any time; however, you may
                   lose any information that enables you to access the Website
                   more quickly and efficiently including, but not limited to,
-                  personalisation settings
+                  personalisation settings.
                 </li>
                 <li>
                   It is recommended that you ensure that your internet browser
@@ -628,7 +677,11 @@ const Privacy = () => {
                 <li>
                   For more information generally on cookies, including how to
                   disable them, please refer to{" "}
-                  <a href="www.aboutcookies.org" target="_blank">
+                  <a
+                    className="text-blue-500 font-bold"
+                    href="https://www.aboutcookies.org"
+                    target="_blank"
+                  >
                     www.aboutcookies.org
                   </a>
                   . You will also find details on how to delete cookies from
@@ -642,206 +695,213 @@ const Privacy = () => {
                 </p>
                 <li> We use the following strictly necessary cookies:</li>
                 <table className="table my-5">
-                  <tr>
-                    <th className="p-4">Description</th>
-                    <th className="p-4">Purpose</th>
-                  </tr>
-                  <tr>
-                    <td className="p-2">Session cookies</td>
-                    <td className="p-2">
-                      These cookies are used to maintain a user's session on the
-                      website, allowing them to remain logged in and navigate
-                    </td>
-                  </tr>
-                  <tr>
-                    <td className="p-2">Load balancing cookies</td>
-                    <td className="p-2">
-                      Through different pages without needing to re-enter their
-                      login credentials.
-                    </td>
-                  </tr>
-                  <tr>
-                    <td className="p-2">Security cookies</td>
-                    <td className="p-2">
-                      These cookies are used to distribute traffic across
-                      multiple servers to ensure the website remains available
-                      and responsive.
-                    </td>
-                  </tr>
-                  <tr>
-                    <td className="p-2">Image generation cookies</td>
-                    <td className="p-2">
-                      These cookies are used to distribute traffic across
-                      multiple servers to ensure the website remains available
-                      and responsive.
-                    </td>
-                  </tr>
-                  <tr>
-                    <td className="p-2">Language preference cookies</td>
-                    <td className="p-2">
-                      These cookies are used to protect the website and its
-                      users from malicious activities, such as hacking, fraud,
-                      or other security threats
-                    </td>
-                  </tr>
-                  <tr>
-                    <td className="p-2">Template information cookies</td>
-                    <td className="p-2">
-                      These cookies are used to protect the website and its
-                      users from malicious activities, such as hacking, fraud,
-                      or other security threats
-                    </td>
-                  </tr>
-                  <tr>
-                    <td className="p-2">Financial Tracking cookies</td>
-                    <td className="p-2">
-                      These cookies are used to store images that a user has
-                      generated on the platform, ensuring that their selections
-                      are retained as they navigate through different pages or
-                      complete the product upload process.
-                    </td>
-                  </tr>
-                  <tr>
-                    <td className="p-2">Authentication cookies</td>
-                    <td className="p-2">
-                      These cookies are used to remember a user's language
-                      preferences, ensuring that they are shown content in their
-                      preferred language
-                    </td>
-                  </tr>
-                  <tr>
-                    <td className="p-2">Form submission cookies</td>
-                    <td className="p-2">
-                      To store Printful templates so the user can upload new
-                      designs on that product
-                    </td>
-                  </tr>
-                  <tr>
-                    <td className="p-2">Error reporting cookies</td>
-                    <td className="p-2">
-                      Collect and store Opensea and Printful information to
-                      provice financial tracking and billing features
-                    </td>
-                  </tr>
-                  <tr>
-                    <td className="p-2">Site preference cookies</td>
-                    <td className="p-2">
-                      These cookies verify the user's identity and ensure that
-                      they are authorized to access certain parts of the website
-                    </td>
-                  </tr>
-                  <tr>
-                    <td className="p-2">Time zone cookies</td>
-                    <td className="p-2">
-                      These cookies remember information that the user has
-                      entered into a form, ensuring that it is not lost if the
-                      user navigates away from the page.
-                      <br />
-                      These cookies collect information about errors that occur
-                      on the website, allowing developers to quickly identify
-                      and fix any issues
-                      <br />
-                      These cookies remember the user's preferences for the
-                      website, such as layout, colors, and font size
-                      <br />
-                      These cookies remember the user's time zone, allowing the
-                      website to display time-sensitive information correctly
-                    </td>
-                  </tr>
+                  <thead>
+                    <tr>
+                      <th className="p-4">Description</th>
+                      <th className="p-4">Purpose</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td className="p-2">Session cookies</td>
+                      <td className="p-2">
+                        These cookies are used to maintain a user's session on
+                        the website, allowing them to remain logged in and
+                        navigate
+                      </td>
+                    </tr>
+                    <tr>
+                      <td className="p-2">Load balancing cookies</td>
+                      <td className="p-2">
+                        These cookies are used to distribute traffic across
+                        multiple servers to ensure the website remains available
+                        and responsive.
+                      </td>
+                    </tr>
+                    <tr>
+                      <td className="p-2">Security cookies</td>
+                      <td className="p-2">
+                        These cookies are used to protect the website and its
+                        users from malicious activities, such as hacking, fraud,
+                        or other security threats.
+                      </td>
+                    </tr>
+                    <tr>
+                      <td className="p-2">Image generation cookies</td>
+                      <td className="p-2">
+                        These cookies are used to store images that a user has
+                        generated on the platform, ensuring that their
+                        selections are retained as they navigate through
+                        different pages or complete the product upload process.
+                      </td>
+                    </tr>
+                    <tr>
+                      <td className="p-2">Language preference cookies</td>
+                      <td className="p-2">
+                        These cookies are used to remember a user's language
+                        preferences, ensuring that they are shown content in
+                        their preferred language.
+                      </td>
+                    </tr>
+                    <tr>
+                      <td className="p-2">Template information cookies</td>
+                      <td className="p-2">
+                        To store Printful templates so the user can upload new
+                        designs on that product.
+                      </td>
+                    </tr>
+                    <tr>
+                      <td className="p-2">Financial Tracking cookies</td>
+                      <td className="p-2">
+                        Collect and store Printful information to provice
+                        financial tracking and billing features.
+                      </td>
+                    </tr>
+                    <tr>
+                      <td className="p-2">Authentication cookies</td>
+                      <td className="p-2">
+                        These cookies verify the user's identity and ensure that
+                        they are authorized to access certain parts of the
+                        website.
+                      </td>
+                    </tr>
+                    <tr>
+                      <td className="p-2">Form submission cookies</td>
+                      <td className="p-2">
+                        These cookies remember information that the user has
+                        entered into a form, ensuring that it is not lost if the
+                        user navigates away from the page.
+                      </td>
+                    </tr>
+                    <tr>
+                      <td className="p-2">Error reporting cookies</td>
+                      <td className="p-2">
+                        These cookies collect information about errors that
+                        occur on the website, allowing developers to quickly
+                        identify and fix any issues.
+                      </td>
+                    </tr>
+                    <tr>
+                      <td className="p-2">Site preference cookies</td>
+                      <td className="p-2">
+                        These cookies remember the user's preferences for the
+                        website, such as layout, colors, and font size.
+                      </td>
+                    </tr>
+                    <tr>
+                      <td className="p-2">Time zone cookies</td>
+                      <td className="p-2">
+                        These cookies remember the user's time zone, allowing
+                        the website to display time-sensitive information
+                        correctly.
+                      </td>
+                    </tr>
+                  </tbody>
                 </table>
                 <li>We use the following functionality cookies:</li>
                 <table className="table my-5">
-                  <tr>
-                    <th className="p-4">Description</th>
-                    <th className="p-4">Purpose</th>
-                  </tr>
-                  <tr>
-                    <td className="p-2">Notification cookie</td>
-                    <td className="p-2">
-                    Stores user preferences for receiving notifications or alerts on the website
-                    </td>
+                  <thead>
+                    <tr>
+                      <th className="p-4">Description</th>
+                      <th className="p-4">Purpose</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td className="p-2">Notification cookie</td>
+                      <td className="p-2">
+                        Stores user preferences for receiving notifications or
+                        alerts on the website.
+                      </td>
                     </tr>
                     <tr>
-                    <td className="p-2">User preference cookie</td>
-                    <td className="p-2">
-                    Stores user preferences such as theme or layout options
-                    </td>
-
+                      <td className="p-2">User preference cookie</td>
+                      <td className="p-2">
+                        Stores user preferences such as theme or layout options.
+                      </td>
                     </tr>
                     <tr>
-                    <td className="p-2">Saved metadata cookie</td>
-                    <td className="p-2">
-                      Allows users to save Printful templates, and Opensea
-                      upload metadata to use in future product uploads
-                    </td>
-                  </tr>
-                  <tr>
-                    <td className="p-2">Session ID cookie</td>
-                    <td className="p-2">
-                      Identifies a user's current session on the website to
-                      allow for continuous browsing and functionality
-                    </td>
-                  </tr>
-                  <tr>
-                    <td className="p-2">Language preference cookie</td>
-                    <td className="p-2">
-                      Stores the language preference of the user to display the
-                      website in the preferred language.
-                    </td>
-                  </tr>
-                  <tr>
-                    <td className="p-2">Financial Tracking cookie</td>
-                    <td className="p-2">
-                      To track Printful and Opensea data to ensure up-to-date
-                      financial tracking and billing features
-                    </td>
-                  </tr>
-                  <tr>
-                    <td className="p-2">Analytics cookie</td>
-                    <td className="p-2">
-                      We use this cookie to identify your computer and analyse
-                      traffic patterns on our website
-                    </td>
-                  </tr>
+                      <td className="p-2">Saved metadata cookie</td>
+                      <td className="p-2">
+                        Allows users to save Printful templates, and Opensea
+                        upload metadata to use in future product uploads.
+                      </td>
+                    </tr>
+                    <tr>
+                      <td className="p-2">Session ID cookie</td>
+                      <td className="p-2">
+                        Identifies a user's current session on the website to
+                        allow for continuous browsing and functionality.
+                      </td>
+                    </tr>
+                    <tr>
+                      <td className="p-2">Language preference cookie</td>
+                      <td className="p-2">
+                        Stores the language preference of the user to display
+                        the website in the preferred language.
+                      </td>
+                    </tr>
+                    <tr>
+                      <td className="p-2">Financial Tracking cookie</td>
+                      <td className="p-2">
+                        To track Printful data to ensure up-to-date financial
+                        tracking and billing features.
+                      </td>
+                    </tr>
+                    <tr>
+                      <td className="p-2">Analytics cookie</td>
+                      <td className="p-2">
+                        We use this cookie to identify your computer and analyse
+                        traffic patterns on our website.
+                      </td>
+                    </tr>
+                  </tbody>
                 </table>
                 <li>We use the following analytical/performance cookies:</li>
                 <table className="table my-5">
-                  <tr>
-                    <th className="p-4">Description</th>
-                    <th className="p-4">Purpose</th>
-                  </tr>
-                  <tr>
-                    <td className="p-2">Google Analytics</td>
-                    <td className="p-2">
-                      This cookie tracks user behavior on the website and
-                      provides insights into how users interact with the site,
-                      which pages they visit, and how long they stay on each
-                      page
-                    </td>
-                  </tr>
-                  <tr>
-                    <td className="p-2">Performance Cookies</td>
-                    <td className="p-2">
-                      To provide crash reports and report performance
-                      information such as error codes to developers to reduce
-                      website down time
-                    </td>
-                  </tr>
+                  <thead>
+                    <tr>
+                      <th className="p-4">Description</th>
+                      <th className="p-4">Purpose</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td className="p-2 md:w-44">
+                        Google Analytics <br /> <br />
+                        Performance Cookies
+                      </td>
+                      <td className="p-2">
+                        This cookie tracks user behavior on the website and
+                        provides insights into how users interact with the site,
+                        which pages they visit, and how long they stay on each
+                        page
+                        <br /> <br />
+                        To provide crash reports and report performance
+                        information such as error codes to developers to reduce
+                        website down time
+                      </td>
+                    </tr>
+                  </tbody>
                 </table>
                 <li> We use the following targeting cookies:</li>
                 <table className="table my-5">
-                  <tr>
-                    <th className="p-4">Description</th>
-                    <th className="p-4">Purpose</th>
-                  </tr>
-                  <tr>
-                    <td className="p-2">Google Analytics</td>
-                    <td className="p-2">
-                      We use this cookie to enable us to show you adverts while
-                      you are browsing our website and other websites on the
-                      internet
-                    </td>
-                  </tr>
+                  <thead>
+                    <tr>
+                      <th className="p-4">Description</th>
+                      <th className="p-4">Purpose</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td className="p-2">Google Analytics</td>
+                      <td className="p-2">
+                        We use this cookie to enable us to show you adverts
+                        while you are browsing our website and other websites on
+                        the internet
+                      </td>
+                    </tr>
+                  </tbody>
                 </table>
                 <p className="font-bold">General</p>
                 <li>
@@ -861,7 +921,7 @@ const Privacy = () => {
                 <li>
                   Unless otherwise agreed, no delay, act or omission by a party
                   in exercising any right or remedy will be deemed a waiver of
-                  that, or any other, right or remedy
+                  that, or any other, right or remedy.
                 </li>
                 <li>
                   This Agreement will be governed by and interpreted according
@@ -876,9 +936,9 @@ const Privacy = () => {
                   law. Any changes will be immediately posted on the Website and
                   you are deemed to have accepted the terms of the privacy
                   policy on your first use of the Website following the
-                  alterations. You may contact Animade by email at{" "}
+                  alterations. You may contact Animade by email a{" "}
                   <a
-                    href="animade.world@gmail.com"
+                    href="mailto:animade.world@gmail.com"
                     target="_blank"
                     className="text-blue-500 font-bold"
                   >
