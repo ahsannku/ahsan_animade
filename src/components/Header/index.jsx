@@ -103,7 +103,7 @@ const Header = () => {
           >
             {navLinks.map((item) => (
               <li
-                key={item.name}
+                key={item.title}
                 className="md:ml-8 text-base font-light md:my-0 my-7 opacity-100"
               >
                 <NavLink to={item.link} className="text-white">

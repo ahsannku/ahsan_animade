@@ -27,3 +27,4 @@ export { default as Singo } from "./singo";
 export { default as Asko } from "./Asko";
 export { default as Howito } from "./Howto";
 export { default as Aboutus } from "./Aboutus";
+export { default as ContactUsPage } from "./ContactUs/ContactUsPage";

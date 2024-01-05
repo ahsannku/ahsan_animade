@@ -19,10 +19,10 @@ button {
   cursor: pointer;
 }
 
-textarea,
+/* textarea,
 input {
   all: unset;
-}
+} */
 
 body {
   font-family: "Noto Sans", sans-serif;
