@@ -11,6 +11,7 @@ import {
   ChangePassword,
   ChoosePlatform,
   ChooseProdutcs,
+  ContactUsPage,
   Drops,
   Financial,
   Home,
@@ -277,6 +278,7 @@ const App = () => {
       <Route path="/About-us" element={<Aboutus />} />
 
       <Route path="/privacy" element={<Privacy />} />
+      <Route path="/contact-us" element={<ContactUsPage />} />
       {/* <Route path="/plan1sucess" element={<Plan1sucess />} />
       <Route path="/plan2sucess" element={<Plan2sucess />} />
       <Route path="/plan3sucess" element={<Plan3sucess />} />
