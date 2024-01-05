@@ -120,8 +120,9 @@ export const privacyListOne = [
   national implementing and supplementary laws, regulations and secondary
   legislation;`,
   `"GDPR" refers to the UK General Data Protection Regulation;`,
-  `Animade", "we" or "us" refers to Animade, located at Winchmore, Chalk Lane,
-  Surrey, kT24 6TH;`,
+  `"Animade", "we" or "us" refers to Animade, located at Winchmore, Chalk Lane,
+  Surrey, kT24 6TH;
+  `,
   `"UK and EU Cookie Law" refers to the Privacy and Electronic Communications
   (EC Directive) Regulations 2003 as amended by the Privacy and Electronic
   Communications (EC Directive) (Amendment) Regulations 2011 & the Privacy
@@ -130,22 +131,18 @@ export const privacyListOne = [
   either (i) employed by Animade and acting in the course of their employment or
   (ii) engaged as a consultant or otherwise providing services to Animade and
   accessing the Website in connection with the provision of such services; and`,
-  `"Website" refers to the website that you are currently using,
-<a href="https://www.animade.world" target="_blank">https://www.animade.world</a>, and any sub-domains of this site unless expressly
-excluded by their own terms and conditions`,
 ];
 
 export const privacyListTwo = [
   `The singular shall include the plural and vice versa;`,
   `References to sub-clauses, clauses, schedules, or appendices are to
   sub-clauses, clauses, schedules, or appendices of this privacy policy;`,
-   `A reference to a person includes firms, companies, government entities,
-    trusts and partnerships;`
-  ,
+  `A reference to a person includes firms, companies, government entities,
+  trusts and partnerships;`,
   `"including" shall be understood to mean "including without limitation";`,
   `Reference to any statutory provision includes any modification or amendment of
   it;`,
-  `The headings and sub-headings do not form part of this privacy policy.`
+  `The headings and sub-headings do not form part of this privacy policy.`,
 ];
 
 export const privacyListThree = [
@@ -174,16 +171,16 @@ export const privacyListFour = [
     example:`,
     list: [
       `when you contact us through the Website, by telephone, post, e-mail or
-      through any other means`,
+      through any other means;`,
       `when you register with us and set up an account to receive our
-      products/services`,
+      products/services;`,
       `when you complete surveys that we use for research purposes (although
-      you are not obliged to respond to them)`,
+        you are not obliged to respond to them);`,
       `when you enter a competition or promotion through a social media
-      channel`,
-      `when you make payments to us, through this Website or otherwise`,
-      `when you elect to receive marketing communications from us`,
-      `when you use our services`,
+      channel;`,
+      `when you make payments to us, through this Website or otherwise;`,
+      `when you elect to receive marketing communications from us;`,
+      `when you use our services;`,
     ],
   },
   {
@@ -192,19 +189,18 @@ export const privacyListFour = [
     available sources. For instance:`,
     list: [
       `Social Media - We may obtain your contact information from a social
-      media platform if you choose to connect with us on that platform.
+      media platform if you choose to connect with us on that platform.      
       `,
       `Google Analytics & Adverts - We may use google analytics to track and
-      advertise our products to you
-      `,
+      advertise our products to you.`,
     ],
   },
   {
     text: `Data is collected automatically: We also collect Data automatically through your
-      use of our Website. This information may include your IP address, web browser
-      type and version, operating system, and other technical information. We may
-      also collect information about your activity on our Website, such as the pages
-      you visit, the time and date of your visit, and the referring website. Additionally`,
+    use of our Website. This information may include your IP address, web browser
+    type and version, operating system, and other technical information. We may
+    also collect information about your activity on our Website, such as the pages
+    you visit, the time and date of your visit, and the referring website. Additionally:`,
     list: [
       `We automatically collect some information about your visit to the Website.
       This information helps us to make improvements to Website content and
@@ -213,21 +209,23 @@ export const privacyListFour = [
       its content.`,
       `We will collect your Data automatically via cookies, in line with the cookie
       settings on your browser. For more information about cookies, and how
-      we use them on the Website, see the section below, headed "Cookies".`,
+      we use them on the Website, see the section below, headed "Cookies".
+      `,
     ],
   },
 ];
 
 export const privacyListFive = [
-  `internal record keeping`,
-  `improvement of our products / services`,
-  `transmission by email of marketing materials that may be of interest to you`,
-  `contact for market research purposes which may be done using email`,
-  `telephone, fax or mail. Such information may be used to customise or update the
-  Website`,
-  `uploading products and NFTs to Printful and Opensea respectively, to determine
-  the billing amount, and in an attempt to investigate any violations of the law or
-  our Terms and Conditions`,
+  `internal record keeping;`,
+  ` improvement of our products / services;`,
+  `transmission by email of marketing materials that may be of interest to you;`,
+  `contact for market research purposes which may be done using email, telephone,
+fax or mail. Such information may be used to customise or update the Website;`,
+  `uploading products to Printful, and in an attempt to investigate any violations of
+  the law or our Terms and Conditions;`,
+  // `uploading products and NFTs to Printful and Opensea respectively, to determine
+  // the billing amount, and in an attempt to investigate any violations of the law or
+  // our Terms and Conditions`,
 ];
 
 export const privacyListSix = [
@@ -235,10 +233,12 @@ export const privacyListSix = [
   previously engaged with us (for example, you contact us to ask us for more
   details about a particular product/service, and we are marketing similar
   products/services). Under "soft opt-in" consent, we will take your consent as
-  given unless you opt-out`,
+  given unless you opt-out.
+  `,
   `for other types of e-marketing, we are required to obtain your explicit consent;
   that is, you need to take positive and affirmative action when consenting by, for
-  example, checking a tick box that we'll provide.`,
+  example, checking a tick box that we'll provide.
+  `,
   `if you are not satisfied with our approach to marketing, you have the right to
   withdraw consent at any time. To find out how to withdraw your consent, see the
   section headed "Your rights" below.`,
@@ -247,18 +247,18 @@ export const privacyListSix = [
 export const privacyListSeven = [
   `any of our group companies or affiliates - to improve our services, and to ensure
   the proper administration of our website and business. Specifically, all
-  businesses affiliated with the Fort Technologies group`,
+  businesses affiliated with the Fort Technologies group;`,
   `our employees, agents and/or professional advisors - to provide customer
-  support, to comply with legal obligations, and to improve our services`,
+  support, to comply with legal obligations, and to improve our services;`,
   `third party service providers who provide services to us which require the
   processing of personal data - to provide integrated services for AI image
   generation, AI text generation, uploading images and metadata to Printful and
   Opensea, payment providers, and Google customer analytics, which ensure the
-  website runs smoothly and allows us to track customer journeys`,
+  website runs smoothly and allows us to track customer journeys;`,
   `third party payment providers who process payments made over the Website - to
-  enable the process of payments and refunds`,
-  `e. relevant authorities - to facilitate the detection of crime or the collection of taxes
-  or duties`,
+  enable the process of payments and refunds;`,
+  `relevant authorities - to facilitate the detection of crime or the collection of taxes
+  or duties;`,
 ];
 
 export const privacyList8 = [
@@ -266,35 +266,39 @@ export const privacyList8 = [
   unique to you.
   `,
   `we store your Data on secure servers.`,
-  `payment details are encrypted using SSL technology (typically you will see a lock
-  icon or green address bar (or both) in your browser when we use this technology.`,
+  // `payment details are encrypted using SSL technology (typically you will see a lock
+  // icon or green address bar (or both) in your browser when we use this technology.`,
 ];
 
 export const privacyList9 = [
   `Right to access - the right to request (i) copies of the information we hold about
-    you at any time, or (ii) that we modify, update or delete such information. If we
-    provide you with access to the information we hold about you, we will not charge
-    you for this, unless your request is "manifestly unfounded or excessive." Where
-    we are legally permitted to do so, we may refuse your request. If we refuse your
-    request, we will tell you the reasons why`,
+  you at any time, or (ii) that we modify, update or delete such information. If we
+  provide you with access to the information we hold about you, we will not charge
+  you for this, unless your request is "manifestly unfounded or excessive." Where
+  we are legally permitted to do so, we may refuse your request. If we refuse your
+  request, we will tell you the reasons why.
+  `,
   `Right to correct - the right to have your Data rectified if it is inaccurate or
-    incomplete.`,
+  incomplete.`,
   `Right to erase - the right to request that we delete or remove your Data from our
-    systems.
+  systems.
     `,
   `Right to restrict our use of your Data - the right to "block" us from using your
-    Data or limit the way in which we can use it.`,
+  Data or limit the way in which we can use it.
+  `,
   `Right to data portability - the right to request that we move, copy or transfer
-    your Data`,
+  your Data.
+  `,
   `Right to object - the right to object to our use of your Data including where we
-    use it for our legitimate interests.
+  use it for our legitimate interests.
     `,
 ];
 
 export const conditonsList1 = [
   `When creating an account, it is the user's obligation to provide precise and
   up-to-date information. The failure to do so may result in the termination of the
-  account.`,
+  account.
+  `,
   `The platform reserves the right to request further information from the user to
   verify their identity, and may do so at any time. Such verification may include the
   use of a third-party service provider.`,
@@ -304,10 +308,9 @@ export const conditonsList1 = [
   `The platform may suspend or terminate a user's account without prior notice or
   explanation, including without limitation, if the user violates the terms and
   conditions of the platform or engages in any activity that the platform deems
-  harmful to its operations.
-  `,
+  harmful to its operations.`,
   `The user is solely accountable for all activities undertaken using their account.
-  Any unauthorized use of the user's account must be reported to the platform
+  Any unauthorised use of the user's account must be reported to the platform
   immediately.`,
   `The user must keep their login credentials confidential and secure. The user may
   not disclose their login credentials to any third-party, and the platform will not be
@@ -321,94 +324,143 @@ export const conditonsList1 = [
 ];
 
 export const conditonsList2 = [
-  `Users who are not part of an active subscription plan (those receiving Free
+  {
+    text: `Users who are not part of an active subscription plan (those receiving Free
     designs monthly) do not own or have licensing rights to the designs created on
-    the platform.
+    the platform.    
 `,
-  `Users shall be provided with 30 free designs per month. If the user requires more
+    array: [
+      `Only once the user is paying for a subscription plan can they distribute the
+created designs to products on their printful stores.`,
+      `Any unauthorised distribution of the designs will result in termination and
+a claim for all of the revenue generated by products incorporating designs
+or the likeness of designs created on the platform.`,
+      `If the user reverts from a paid subscription plan to the free monthly
+designs, they forfeit their licensing rights to the created images.`,
+    ],
+  },
+  {
+    text: `Users shall be provided with 30 free designs per month. If the user requires more
   designs or exceeds this limit, they may purchase additional designs through
   variously priced packages for a monthly fee. Additional designs may solely be
-  procured on a monthly basis and are not transferable to the following month.`,
-  `Users are obligated to pay for their selected package of design credits in full
+  procured on a monthly basis and are not transferable to the following month.
+  `,
+    array: [
+      `If the user cancels their package, any unused design credits shall remain
+    credited to their account for the remainder of the month, and they shall
+    not be charged for the following month's package.`,
+    ],
+  },
+  {
+    text: `Users are obligated to pay for their selected package of design credits in full
   before being able to create additional designs corresponding to their paid plan.
   Payment must be made through the payment methods accepted by the platform.
   The platform reserves the right to alter possible payment methods and
   subscription pricing at any time, and the user must be willing to pay using this
-  new payment method, else, they may face termination from the platform.`,
-  `Users are able to purchase design credits on a monthly basis to create designs
+  new payment method, else, they may face termination from the platform.
+  `,
+  },
+  {
+    text: `Users are able to purchase design credits on a monthly basis to create designs
   on the platform. Any unused design credits from the current month will remain
   credited to the user's account for that month, and they will not be credited or
   charged for next month's packages. Additional designs can only be bought
   monthly, and they do not roll-over to the next month, so the subscribed designs
   must be used within the month the user purchased the credits until the same day
-  of the next month.
+  of the next month.  
 `,
-  `Unless with written consent from the provider, only one account per user is
+  },
+  {
+    text: `Unless with written consent from the provider, only one account per user is
   permitted, and any effort to contravene by creating additional accounts may
-  result in termination.
+  result in termination.  
 `,
-  `The platform reserves the right to change the pricing of the monthly subscriptions
-  at any time with no expressed written warning.
+  },
+  {
+    text: `The platform reserves the right to change the pricing of the monthly subscriptions
+  at any time with no expressed written warning.  
 `,
+  },
 ];
 
 export const conditonsList3 = [
   `The user can never hold the platform accountable for any claims or damages
   arising from their use of the platform. This includes but is not limited to any
   third-party claims or damages. Any damages that arise are the sole responsibility
-  of the user.`,
+  of the user.
+  `,
   `The platform provides no guarantees as to the quality or accuracy of the designs
-  created on the platform.`,
+  created on the platform.
+  `,
   `The platform is not responsible for any disputes that may arise between the user
   and third-party providers. It is the user's responsibility to resolve any such
-  disputes.`,
+  disputes.
+  `,
   `The platform cannot be held liable for any disputes regarding third-party products
-  or services.`,
-  `The platform reserves the right to display advertisements on the platform.`,
+  or services.
+  `,
+  `The platform reserves the right to display advertisements on the platform.
+  `,
   `The platform may use the user's data for marketing purposes.`,
   `The user has the right to opt out of any marketing communications from the
   platform at any time.`,
   `The platform may share the user's data with third-party providers in order to
   provide the service.`,
-  `The platform may use third-party services for data storage and processing.`,
+  `The platform may use third-party services for data storage and processing.
+  `,
   `The platform may transfer the user's data to a third-party if the platform is
-  acquired by another company.`,
+  acquired by another company.
+  `,
   `The user may request the deletion of their account and data at any time, except
   any data that is owned by the platform according to this document, such as the
-  designs.`,
+  designs.
+  `,
   `The platform is not liable for any loss or damage resulting from a data breach.
-  The user assumes full responsibility for any such loss or damage.`,
+  The user assumes full responsibility for any such loss or damage.
+  `,
   `The user must comply with all applicable laws and regulations when using the
-  platform.`,
+  platform.
+  `,
   `The platform may cooperate with law enforcement in the event of a criminal
   investigation.`,
   `The platform may disclose the user's data if required by law or court order.`,
   `The user is responsible for using OpenAIs and Stable Diffusions software and
-  agrees not to violate their terms of service by using our service.`,
+  agrees not to violate their terms of service by using our service.
+  `,
   `The platform owns the commercial rights to all images created on its platform.`,
   `Users may lease commercial rights to designs on monetizable and
   non-monetizable channels, provided they continue to pay the subscription
-  charge.`,
+  charge.
+  `,
   `Users are responsible for ensuring created designs do not infringe any existing
-  intellectual property rights.`,
+  intellectual property rights.
+  `,
 ];
 
 export const conditonsList4 = [
-  `The platform, being the owner of this website and its related services, hereby
+  {
+    text: `The platform, being the owner of this website and its related services, hereby
   asserts its right to modify its terms and conditions and privacy policy at its
   discretion and without prior notice to users. In accepting the terms and conditions
   of this website, users acknowledge and agree that they are bound by any
   modifications made by the platform and its related entities, and shall be deemed
   to have accepted the new terms by continuing to use the platform.
 `,
-  `The platform, in its sole discretion, may terminate a user's account for any
+  },
+  {
+    text: `The platform, in its sole discretion, may terminate a user's account for any
   reason, without notice or liability to the user. Upon termination of a user's
   account, the platform shall immediately revoke the commercial rights to the
   images created by the user, as well as any revenue generated from such images,
   without compensation to the user.`,
-  `Termination will deny the user the right to use the platform on the terminated
-account, or any other account created by the terminated user, indefinitely.`,
-  `In the event that a user fails to pay the charges for their use of the platform, the
+  },
+  {
+    text: `Termination will deny the user the right to use the platform on the terminated
+  account, or any other account created by the terminated user, indefinitely.
+  `,
+  },
+  {
+    text: `In the event that a user fails to pay the charges for their use of the platform, the
   platform may terminate their account and reclaim the commercial rights to the
   images, as well as all income from monetization platforms from the point of the
   initial missed payment onwards. The user will be given two missed payment
@@ -416,86 +468,143 @@ account, or any other account created by the terminated user, indefinitely.`,
   has a mandatory 72 hour response time from the exact time the warning is sent
   to the user.
 `,
-  `Users must upload their designs and products to authorised Printful stores, any
+    array: [
+      `If there is no response within 72 hours, it is seen as an admission of guilt,
+  and the account is terminated, and the reclamation process will start.
+  `,
+      `As these accounts are operating without the correct licensing, we reserve
+  the right to reclaim the income earned using licenced images generated
+  on the platform from the point of initial breach of terms onwards.
+  `,
+    ],
+  },
+  {
+    text: `Users must upload their designs and products to authorised Printful stores, any
   attempt to upload to unauthorised stores will result in termination and the
   reclamation process will begin.`,
-  `In the event of a user's account termination and initiation of the reclamation
-  process due to a violation of these terms and conditions, the consequences of
-  such termination, including the revocation of commercial rights to images and
-  any claimed revenue, shall persist irrespective of the user's subsequent
-  subscription status. This continuity applies even if the user chooses to revert to a
-  free plan after the termination. The platform retains the right to reclaim revenue
-  generated from the date of the initial breach of these terms, regardless of the
-  user's current subscription level.`
+  },
+  {
+    text: `In the event of a user's account termination and initiation of the reclamation
+process due to a violation of these terms and conditions, the consequences of
+such termination, including the revocation of commercial rights to images and
+any claimed revenue, shall persist irrespective of the user's subsequent
+subscription status. This continuity applies even if the user chooses to revert to a
+free plan after the termination. The platform retains the right to reclaim revenue
+generated from the date of the initial breach of these terms, regardless of the
+user's current subscription level.`,
+  },
 ];
 
 export const conditonsList5 = [
-  `The platform reserves the rights to terminate users' accounts and reclaim the
+  {
+    text: `The platform reserves the rights to terminate users' accounts and reclaim the
   commercial rights to the images, as well as all income from monetization
-  platforms from the point of the initial notice of their breach of these terms.
+  platforms from the point of the initial notice of their breach of these terms.  
 `,
-  `The user will be given a minimum of one warning, and a maximum of two
+  },
+  {
+    text: `The user will be given a minimum of one warning, and a maximum of two
   warnings once their account is terminated before we begin the reclamation
   process. The second payment warning has a mandatory 72 hour response time
   from the exact time the warning is sent to the user.
 `,
-  [
-    `If the response is not seen as adequate by the platform, it is seen as an
-admission of guilt, and the account is terminated, and the reclamation
-process will start`
-  ]
+    array: [
+      `If the response is not seen as adequate by the platform, it is seen as an
+    admission of guilt, and the account is terminated, and the reclamation
+    process will start.`,
+      `We reserve the right to deem any response inadequate unless the original
+    issue is resolved within the 72 hour time frame. Including but not limited to
+    making payments and copyright infringement.`,
+    ],
+  },
 ];
 
 export const conditonsList6 = [
-  `The platform reserves the right to update or modify the terms and conditions at
+  {
+    text: `The platform reserves the right to update or modify the terms and conditions at
   any time without notice. Any changes to the terms and conditions will take effect
   immediately upon posting on the platform. To continue using the platform, users
-  must agree to the new terms and conditions.`,
-  `The platform may require the user to agree to additional terms and conditions for
+  must agree to the new terms and conditions.
+  `,
+  },
+  {
+    text: `The platform may require the user to agree to additional terms and conditions for
   certain features or services offered by the platform. These additional terms and
   conditions will be presented to the user prior to using the relevant feature or
-  service.`,
-  `The user may not sublicense or transfer their rights to use the platform to any
-  third party without the prior written consent of the platform.
+  service.
+  `,
+  },
+  {
+    text: `The user may not sublicense or transfer their rights to use the platform to any
+  third party without the prior written consent of the platform.  
 `,
-  `The user may not use the platform to compete with the platform. Any attempt to
-  do so may result in immediate termination of the user's account.`,
-  `The platform reserves the right to terminate a user's account if the user engages
+  },
+  {
+    text: `The user may not use the platform to compete with the platform. Any attempt to
+  do so may result in immediate termination of the user's account.
+  `,
+  },
+  {
+    text: `The platform reserves the right to terminate a user's account if the user engages
   in unfair competition, which includes any activity that aims to unfairly compete
   with the platform, such as using the platform to create designs that mimic or
-  closely resemble the designs created by the platform.`,
-  `The platform may use feedback provided by the user for product improvement
+  closely resemble the designs created by the platform.
+  `,
+  },
+  {
+    text: `The platform may use feedback provided by the user for product improvement
   purposes, including but not limited to developing new features, improving existing
   features, and enhancing the overall user experience.`,
-  `The platform may offer beta features or services that are still under development
+  },
+  {
+    text: `The platform may offer beta features or services that are still under development
   and may be subject to additional terms and conditions. These beta features or
   services may be withdrawn at any time without notice.`,
-  `The platform may limit or suspend the user's access to the platform for
+  },
+  {
+    text: `The platform may limit or suspend the user's access to the platform for
   maintenance or upgrades, which may result in temporary unavailability of the
   platform or certain features or services. The platform will endeavour to provide
   users with advance notice of any scheduled maintenance or upgrades that may
   affect their access to the platform.`,
-  `The platform reserves the right to modify, suspend, or terminate the platform at
+  },
+  {
+    text: `The platform reserves the right to modify, suspend, or terminate the platform at
   any time without notice. The platform will make reasonable efforts to provide
   users with advance notice of any such modification, suspension, or termination,
   and will endeavour to provide users with a reasonable transition period to retrieve
   any data or designs created on the platform before termination.`,
-  `We reserve the right to remove any designs from our platform, for reasons
+  },
+  {
+    text: `We reserve the right to remove any designs from our platform, for reasons
   including but not limited to breach of third-party intellectual property rights or
-  explicit images.`,
-  `We retain the right to enforce any of the stipulated terms herein, irrespective of
-  whether such terms have been previously enforced.`,
+  explicit images.
+  `,
+  },
+  {
+    text: `We retain the right to enforce any of the stipulated terms herein, irrespective of
+  whether such terms have been previously enforced.
+  `,
+    array: [
+      `The platform reserves the right to reclaim all revenue from the date of the
+    initial breach of our terms and conditions, not when the issue is identified.`,
+      `The user agrees that as soon as the terms and conditions are breached,
+    that they forfeit the commercial rights to distribute and sell items with that
+    design until the issue is resolved.`,
+    ],
+  },
 ];
 
 export const conditonsList7 = [
   `The platform is provided on an "as is" and "as available" basis without any
   warranties or representations, express or implied. Therefore, the platform shall
   not be held liable for any legal or financial repercussions arising from any use or
-  misuse of the platform.`,
+  misuse of the platform.
+  `,
   `The platform does not accept any responsibility for any direct, indirect, incidental,
   consequential, or punitive damages arising from the use or inability to use the
   platform. This includes, but is not limited to, any loss of data or revenue resulting
-  from the use or inability to use the platform.
+  from the use or inability to use the platform.  
 `,
   `The platform is not liable for any damages resulting from the actions of third-party
   providers. Furthermore, the platform assumes no responsibility for any errors or
@@ -509,21 +618,38 @@ export const conditonsList7 = [
 ];
 
 export const conditonsList8 = [
-  `The terms and conditions are governed by and construed in accordance with the
+  {
+    text: `The terms and conditions are governed by and construed in accordance with the
   laws of the jurisdiction where the platform is registered, which is the United
   Kingdom.`,
-  `Any disputes arising from the use of the platform will be resolved by the courts of
-  the jurisdiction where the platform is registered.`,
-  `Any financial claims for funds due to termination or otherwise can be pursued
+    array: [
+      `In accordance with this clause, the terms and conditions for the use of the
+    platform are to be regulated by and interpreted in compliance with the
+    laws of the jurisdiction where the platform is registered, which is the
+    United Kingdom.`,
+    ],
+  },
+  {
+    text: `Any disputes arising from the use of the platform will be resolved by the courts of
+  the jurisdiction where the platform is registered.
+  `,
+  },
+  {
+    text: `Any financial claims for funds due to termination or otherwise can be pursued
   through any legal means in the user's country, but any dispute regarding such
   claims must be resolved in London, United Kingdom, as the governing law of the
-  United Kingdom shall apply to the resolution of such disputes.`,
-  `It is further established that any claims for financial compensation resulting from
-  termination or any other cause can be pursued by any legal means in the user's
-  country. However, in the case of any dispute concerning such claims, the
-  jurisdiction of London, United Kingdom shall apply, as the governing law of the
-  United Kingdom shall govern the resolution of such disputes.`
-]
+  United Kingdom shall apply to the resolution of such disputes.
+  `,
+  },
+  {
+    text: `It is further established that any claims for financial compensation resulting from
+    termination or any other cause can be pursued by any legal means in the user's
+    country. However, in the case of any dispute concerning such claims, the
+    jurisdiction of London, United Kingdom shall apply, as the governing law of the
+    United Kingdom shall govern the resolution of such disputes.
+    `,
+  },
+];
 
 export const settingsLinks = [
   // {
@@ -1849,30 +1975,31 @@ export const whatWedo = [
 ];
 
 export const routeToMetaInfo = {
-  '/': {
+  "/": {
     title: "Home",
     description: `Revolutionize E-Commerce with our innovative AI platform! Generate High-quality images, seamless Listing configuration, and automated store uploads for No upfront cost. Seamlessly integrate the latest AI image generation into your channels. Create, Sell, Thrive!`,
   },
-  '/How-it-works': {
+  "/How-it-works": {
     title: "How it Works",
     description: `See how Animade works, check out our step-by-step tutorial guide & learn to create designs for your products and automate uploads for your online store`,
   },
-  '/about-us': {
+  "/about-us": {
     title: "About Us",
     description: `See who we are & what we do. Learn about our mission to empower AI artists & entrepreneurs to interact with cutting-edge technology & drive sales through a simple, user-friendly monetization platform.`,
   },
-  '/pricing': {
+  "/pricing": {
     title: "Pricing",
     description: `Explore our plans & scale-up for more designs to match your needs. Start FREE today`,
   },
-  '/register': {
+  "/register": {
     title: "Sign Up",
     description: `Sign Up & Start your AI E-Commerce stores for free today! Use AI to design & create products that connect with your target audience.`,
   },
-  '/login': {
+  "/login": {
     title: "Sign In",
     description: `Sign in to create AI designs for products on your e-commerce stores`,
   },
 };
 
-export const default_negative_prompt = '(child:1.5), ((((underage)))), ((((child)))), (((kid))), (((preteen))), (teen:1.5) ugly, tiling, poorly drawn hands, poorly drawn feet, poorly drawn face, out of frame, extra limbs, disfigured, deformed, body out of frame, bad anatomy, watermark, signature, cut off, low contrast, underexposed, overexposed, bad art, beginner, amateur, distorted face, blurry, draft, grainy'
+export const default_negative_prompt =
+  "(child:1.5), ((((underage)))), ((((child)))), (((kid))), (((preteen))), (teen:1.5) ugly, tiling, poorly drawn hands, poorly drawn feet, poorly drawn face, out of frame, extra limbs, disfigured, deformed, body out of frame, bad anatomy, watermark, signature, cut off, low contrast, underexposed, overexposed, bad art, beginner, amateur, distorted face, blurry, draft, grainy";
