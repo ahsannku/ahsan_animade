@@ -275,7 +275,7 @@ const App = () => {
       </Route>
 
       <Route path="/About-us" element={<Aboutus />} />
-
+      {/*  contact-us route here */}
       <Route path="/privacy" element={<Privacy />} />
       {/* <Route path="/plan1sucess" element={<Plan1sucess />} />
       <Route path="/plan2sucess" element={<Plan2sucess />} />
