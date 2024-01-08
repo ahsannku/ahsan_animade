@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useMemo, useState } from "react";
 import { IoIosArrowBack } from "react-icons/io";
 import { useDispatch, useSelector } from "react-redux";
 import Input from "../Input";
@@ -12,6 +12,18 @@ import { generateUUID } from "../../utils/uuid";
 const ListingDialogue = ({ singleProduct, closeListingDialogue = () => {}, designForProductCreation = null }) => {
   const [selectedVariants, setSelectedVariants] = useState([]);
   const [variantPrice, setVariantPrice] = useState("");
+  const [productPrice, setProductPrice] = useState("");
+  const profit = useMemo(() => {
+    const _productPrice = parseFloat(productPrice);
+    const _variantPrice = parseFloat(variantPrice);
+    if(isNaN(_productPrice) || isNaN(_variantPrice)){
+      return 0;
+    }
+    if(_variantPrice > _productPrice){
+      return 0;
+    }
+    return (_productPrice - _variantPrice).toFixed(2);
+  }, [productPrice, variantPrice]);
   const { product, variants } = singleProduct;
   // const { image = '', title = '', type = '' } = product;
 
@@ -117,7 +129,7 @@ const ListingDialogue = ({ singleProduct, closeListingDialogue = () => {}, desig
             className=" h-[300px] lg:h-[300px] rounded-3xl border-[3px] border-[#7b63ab]"
           />
 
-          <div className="w-[70%] rounded-[20px] px-[20px] py-[10px] border-[3px] border-[#7B63AB]">
+          <div style={{overflowY:"scroll"}} className="w-[70%] rounded-[20px] px-[20px] py-[10px] border-[3px] border-[#7B63AB]">
             <div className="flex flex-col items-start">
               <label htmlFor="" className="">
                 Title
@@ -212,14 +224,14 @@ const ListingDialogue = ({ singleProduct, closeListingDialogue = () => {}, desig
             </div>
             <div className="flex-1 bg-[#6F6F6F] flex h-full gap-5 items-center justify-center">
               <label htmlFor="price">$</label>
-              <input type="number" placeholder="____.__" className=" w-[40%] text-left bg-transparent" />
+              <input value={productPrice} onChange={(e) => setProductPrice(e.target.value)} type="number" placeholder="____.__" className=" w-[40%] text-left bg-transparent" />
             </div>
             <div className="flex-1 flex flex-col">
               <div className="flex justify-center items-center h-[50%] border-[1px] border-[#7B63AB]">
                 <h4 className="text-xl lg:text-[20px] font-bold">Profit Per Sale</h4>
               </div>
               <div className="flex justify-center items-center h-[50%]">
-                <h4>_____.__</h4>
+                <h4>{profit}</h4>
               </div>
             </div>
           </div>

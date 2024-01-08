@@ -30,16 +30,27 @@ const SignIn = () => {
     });
   };
 
+  function isValidEmail(email) {
+    const emailPattern = /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/;
+    return emailPattern.test(email);
+  }
+
   const submitFormHandler = async (e) => {
     e.preventDefault();
-    await dispatch(login(data)).then((res) => {
+    let _data = {...data};
+    if(isValidEmail(_data.username)){
+      _data = {password:_data.password, email: _data.username}
+    }
+    // console.log(_data)
+
+    await dispatch(login(_data)).then((res) => {
       if (!res?.error) {
         setTimeout(() => {
+          dispatch(getUser());
           navigate("/single-input");
         }, 1000);
       }
     });
-    dispatch(getUser());
   };
 
   const sendEmail = async () => {
@@ -129,11 +140,11 @@ const SignIn = () => {
                 )}
               </button>
 
-              {error && (
+              {/* {error && (
                 <p className="text-[14px] text-custom-red text-center bg-[#ffcccc] rounded-md p-[10px] mt-2 font-semibold">
                   {error?.message}
                 </p>
-              )}
+              )} */}
               <Link
                 to="/register"
                 className="text-[16px] text-center bg-gray-opacity block mx-auto mt-2 p-[10px]"

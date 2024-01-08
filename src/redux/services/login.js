@@ -9,11 +9,7 @@ export const login = createAsyncThunk(
     try {
       const res = await axios.post(
         `${import.meta.env.VITE_APP_SERVER_API_URL}/login/`,
-        JSON.stringify({
-          username: formData.username,
-          // email: formData.email,
-          password: formData.password,
-        }),
+        JSON.stringify(formData),
         {
           headers: {
             "Content-Type": "application/json",
