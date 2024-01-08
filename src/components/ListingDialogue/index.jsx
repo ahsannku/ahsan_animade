@@ -109,7 +109,7 @@ const ListingDialogue = ({ singleProduct, closeListingDialogue = () => {}, desig
         </h2>
       </div>
 
-      <div className="flex flex-col gap-5 my-5">
+      <div className="flex flex-col gap-5 my-5 mt-4">
         <div className="flex gap-5 h-[250px] lg:h-[300px]">
           <img
             src={product?.image}
@@ -120,10 +120,10 @@ const ListingDialogue = ({ singleProduct, closeListingDialogue = () => {}, desig
           <div className="w-[70%] rounded-[20px] px-[20px] py-[10px] border-[3px] border-[#7B63AB]">
             <div className="flex flex-col items-start">
               <label htmlFor="" className="">
-                Name
+                Title
               </label>
               <Input
-                placeholder="Item Name"
+                placeholder="Item title"
                 type="text"
                 className="text-left w-full"
                 onChange={(e) => inputChangeHandler(e, "itemName")}
@@ -135,9 +135,9 @@ const ListingDialogue = ({ singleProduct, closeListingDialogue = () => {}, desig
             <div className="text-left mt-2 flex flex-col w-full">
               <label htmlFor="">Description</label>
               <Input
-              type='textarea'
+                type='textarea'
                 placeholder="Provide a detailed description of your creation"
-                className="min-h-full"
+                className=" !rounded-[10px] !min-h-[135px]" 
                 onChange={(e) => inputChangeHandler(e, "desc")}
                 value = {data?.desc || ''}
               />
