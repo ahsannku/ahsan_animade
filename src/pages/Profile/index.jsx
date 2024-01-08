@@ -98,7 +98,7 @@ const Profile = () => {
         </header>
         <div className="">
           <h3 className="text-lg lg:text-2xl font-bold mb-4 font-poppins">
-            Past Designs ({designs.length})
+            Past Designs ({designs?.length ?? 0})
           </h3>
           <Cardo
             showImageAttribute={true}

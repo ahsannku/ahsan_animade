@@ -1,22 +1,54 @@
-import React, { useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { AiOutlineLogin } from "react-icons/ai";
 import { Title } from "../../components";
 import { useLocation, useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { verifyOtp } from "../../redux/services/verifynumber";
 import { getUser } from "../../redux/services/getUser";
+import api from "../../api";
+import axios from "axios";
+import { customAlert } from "../../utils/alert2";
+
+const timerSeconds = 10;
 
 const VerifyNumber = () => {
-  const dispatch = useDispatch();
   const location = useLocation();
-  const navigate = useNavigate();
+
   const { username } = location.state || {};
+  // console.log('username', username)
   const [otpValues, setOtpValues] = useState(Array(6).fill(""));
+  const [timer, setTimer] = useState({ enabled: false, timerSeconds: 0 });
+  const timerInterval = useRef();
+
   const inputsRef = useRef(
     Array(6)
       .fill()
       .map(() => React.createRef())
   );
+
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    // console.log('username', username)
+    if(username) {
+      setTimer({ enabled: true, timerSeconds }); 
+      timerInterval.current = setInterval(() => {
+        setTimer((prev) => {
+          if (prev.timerSeconds > 0) {
+            if (prev.timerSeconds === 1) {
+              clearInterval(timerInterval.current);
+            }
+            return { enabled: prev.timerSeconds === 1 ? false : true, timerSeconds: prev.timerSeconds - 1 };
+          }
+          return prev;
+        });
+      }, 1000);
+    }
+    return () => {
+      clearInterval(timerInterval.current);
+    }
+  }, [username]);
 
   const handleInputChange = (index) => (e) => {
     const values = [...otpValues];
@@ -28,7 +60,7 @@ const VerifyNumber = () => {
     }
   };
 
-  console.log(username);
+  // console.log(username);
   const otp = otpValues.join("");
   // console.log("otp is : ", otp);
   const data = {
@@ -36,17 +68,39 @@ const VerifyNumber = () => {
     otp,
   };
 
-  const handleOtpSubmit = async (e) => {
-    e.preventDefault();
+  const handleOtpSubmit = async () => {
     await dispatch(verifyOtp(data)).then((res) => {
       if (!res?.error) {
         setTimeout(() => {
+          dispatch(getUser());
           navigate("/single-input");
         }, 1000);
       }
     }); 
-    console.log("getting user: ")
-    dispatch(getUser());
+  };
+
+  const handleRequestNewCode = async () => {
+    try {
+      if(!timer.enabled){
+        await axios.post("https://animade-production.up.railway.app/send_otp/", { username });
+        setTimer({ enabled: true, timerSeconds });
+        timerInterval.current = setInterval(() => {
+          setTimer((prev) => {
+            if (prev.timerSeconds > 0) {
+              if (prev.timerSeconds === 1) {
+                clearInterval(timerInterval.current);
+              }
+              return { enabled: prev.timerSeconds === 1 ? false : true, timerSeconds: prev.timerSeconds - 1 };
+            }
+            return prev;
+          });
+        }, 1000);
+        customAlert('Verification code has been sent.', 'success');
+      }
+    } catch (error) {
+      console.error(error);
+      customAlert('Something went wrong.', 'error');
+    }
   };
 
   // console.log("username is : ", username);
@@ -61,9 +115,8 @@ const VerifyNumber = () => {
             <span>Verify your Phone Number</span>
           </Title>
         </div>
-        <form
+        <div
           className=" mt-8 w-full lg:w-5/6 mx-auto "
-          onSubmit={handleOtpSubmit}
         >
           <p className="text-base text-center p-3">
             We sent a code to your phone number
@@ -85,8 +138,8 @@ const VerifyNumber = () => {
           <div className=" flex flex-col gap-4 items-center justify-center">
             <button className="text-base text-center bg-gray-opacity p-2 w-full">
               Not working?
-              <span className="text-custom-red font-bold">
-                Request a new code (34)
+              <span onClick={handleRequestNewCode} className="text-custom-red font-bold">
+                  {"   "}Request a new code {timer.enabled && `in  ${timer.timerSeconds} secs`} 
               </span>
             </button>
 
@@ -97,14 +150,14 @@ const VerifyNumber = () => {
               I’m having trouble
             </button>
             <button
-              type="submit"
               className="text-lg flex gap-3 drop-button font-bold max-w-full"
+              onClick={handleOtpSubmit}
             >
               Submit
               <AiOutlineLogin className="h-7 w-7" />
             </button>
           </div>
-        </form>
+        </div>
       </div>
     </div>
   );
