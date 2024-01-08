@@ -113,14 +113,14 @@ const Profile = () => {
           <ProductCreationFooter
             selected={true}
             count={selectedItems.length}
-            rightBtnText="Create Products"
+            rightBtnText="Create Your Products"
             leftBtnText="Deselect All"
             leftBtnClickHandler={deselectHandler}
             rightBtnClickHandler={designsSlectionHandler}
           />
       ) : (
           <div className="ml-auto">
-            <Button to="/">Create Products</Button>
+            <Button to="/">Create Your Products</Button>
           </div>
 
       )}

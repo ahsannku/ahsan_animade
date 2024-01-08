@@ -9,7 +9,7 @@ const AboutHero = () => {
   });
   return (
     <section className="hero-bg relative  ">
-      <div className="bg-gradient-to-t from-[#140E18]  to-[#140E1800] pb-12 tablet:pb-28">
+      <div className="bg-gradient-to-t from-[#140E18]  to-[#140E1800] tablet:pb-28">
         <div className="custom-container  h-full flex flex-row justify-between relative z-50 items-center pt-36">
           <img
             src="/assets/images/red-cricle.png"
