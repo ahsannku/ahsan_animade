@@ -26,6 +26,7 @@ const Banner = () => {
 
   const handleGenerate = () => {
     if(selectedSandbox === sandboxTypes.ASK_AI){
+      setDesigns([]);
       setgeneratedOptions([]);
       handleAskAi();
     } else {
@@ -45,7 +46,7 @@ const Banner = () => {
       }
       setloading(true);
       const content = ` ${extraWords} ${prompt}`;
-      console.log(content)
+      // console.log(content)
       const { data } = await axios.post(
         `${config.OPEN_AI_URL}/v1/chat/completions`,
         {
@@ -98,8 +99,8 @@ const Banner = () => {
         negative_prompt: default_negative_prompt,
         width: '512',
         height: '512',
-        // samples: 4,
-        samples: 1,
+        samples: 4,
+        // samples: 1,
         num_inference_steps: '20',
         seed: null,
         guidance_scale: 7.5,
