@@ -3,7 +3,6 @@ import { AiOutlineLogin } from "react-icons/ai";
 import { useDispatch, useSelector } from "react-redux";
 import { Link, useNavigate } from "react-router-dom";
 import { Input, Title } from "../../components";
-import { getUser } from "../../redux/services/getUser";
 import { register } from "../../redux/services/register";
 import { countriesCodes } from "../../utils/data";
 import {

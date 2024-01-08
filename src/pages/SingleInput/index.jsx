@@ -16,6 +16,7 @@ import ProductCreationFooter from "../../components/ProductCreationFooter";
 import { setSelectedDeigns } from "../../redux/features/printfulSlice";
 import { toast } from "react-toastify";
 import { customAlert } from "../../utils/alert2";
+import { decreaseRemainingDesigns } from "../../redux/features/userSlice";
 
 const SingleInput = () => {
   const [selectedDesigns, setSelectedDesigns] = useState([]);
@@ -46,7 +47,7 @@ const SingleInput = () => {
   useEffect(() => {
     // Step 3: Automatically add the generated images to saved designs when available
     if (textToImageResluts && textToImageResluts.length > 0) {
-      console.log(textToImageResluts)
+      dispatch(decreaseRemainingDesigns(data.samples))
       // // Assuming you want to save all the generated images automatically.
       // textToImageResluts.forEach((generatedImage) => {
       //   const description = data.prompt; // You can set a default description if needed.

@@ -4,6 +4,7 @@ import { getCreatedDesigns } from "../services/getCreatedDesigns"; // Import the
 
 const initialState = {
   user: JSON.parse(localStorage.getItem("user")) || null,
+  remainingDesigns: 0,
   isLoading: false,
   error: null,
   createdDesigns: [], // Add this field,
@@ -12,7 +13,14 @@ const initialState = {
 const userSlice = createSlice({
   name: "user",
   initialState,
-  reducers: {},
+  reducers: {
+    setRemainingDesigns :(state, action) => {
+      state.remainingDesigns = action.payload;
+    },
+    decreaseRemainingDesigns :(state, action) => {
+      state.remainingDesigns = state.remainingDesigns - action.payload;
+    }
+  },
   extraReducers: (builder) => {
     // ========== getUser ============== //
     builder.addCase(getUser.pending, (state) => {
@@ -37,5 +45,7 @@ const userSlice = createSlice({
     });
   },
 });
+
+export const {setRemainingDesigns, decreaseRemainingDesigns} = userSlice.actions;
 
 export default userSlice.reducer;

@@ -1,11 +1,14 @@
 import React, { useEffect, useState } from "react";
 import { RocketIcon } from "../../icons";
-import Button from "../Button";
 import { useNavigate, Link } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
+import { setRemainingDesigns } from "../../redux/features/userSlice";
 
 const UserAccountLimit = () => {
   const [userData, setUserData] = useState(null);
+  const remainingDesigns = useSelector(state => state.user.remainingDesigns);
   const navigate = useNavigate();
+  const dispatch = useDispatch();
 
   useEffect(() => {
     const tokenWithQuotes = localStorage.getItem("token");
@@ -13,7 +16,7 @@ const UserAccountLimit = () => {
 
     if (token) {
       fetch(
-        " https://animade-production.up.railway.app/api/users/profile/",
+        "https://animade-production.up.railway.app/api/users/profile/",
         {
           method: "GET",
           headers: {
@@ -24,6 +27,7 @@ const UserAccountLimit = () => {
         .then((response) => response.json())
         .then((data) => {
           setUserData(data);
+          dispatch(setRemainingDesigns(data?.designs_remaining ?? 0));
         })
         .catch((error) => {
           console.error("Error fetching user data:", error);
@@ -37,13 +41,13 @@ const UserAccountLimit = () => {
   };
 
   const getUserDesigns = () => {
-    if(!userData?.designs_remaining){
+    if(!remainingDesigns){
       return 0;
     }
-    if(userData?.designs_remaining < 0){
+    if(remainingDesigns < 0){
       return 'Unlimited';
     }
-    return userData?.designs_remaining;
+    return remainingDesigns;
   }
 
   return (

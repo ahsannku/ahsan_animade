@@ -45,7 +45,7 @@ const Profile = () => {
   };
   const designsSlectionHandler = () => {
 
-    console.log(selectedItems);
+    // console.log(selectedItems);
     dispatch(setSelectedDeigns(selectedItems));
     navigate("/product-creation");
   };

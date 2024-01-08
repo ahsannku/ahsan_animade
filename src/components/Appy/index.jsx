@@ -46,7 +46,7 @@ const Appy = () => {
             </div>
             {/*  */}
             <div className="flex flex-col justify-center items-center">
-              <div className="laptop:w-[280px] w-full sm:p-0 p-5 aos-init aos-animate" data-aos="fade-right" data-aos-duration="1000">
+              <div className="laptop:w-[330px] h-[330px] w-full sm:p-0 p-5 aos-init aos-animate" data-aos="fade-right" data-aos-duration="1000">
                 <div className="player" style={{ width: "100%", height: "100%", padding:'0.3em', margin:'0.1em' }}>
                   <video
                     key={currentIndex}
