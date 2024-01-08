@@ -47,7 +47,7 @@
 
 @layer components {
   .drop_connection::after {
-    @apply hidden absolute top-[-10%] left-10 lg:left-16 h-full w-1 bg-white -z-10;
+    @apply hidden absolute top-[-10%] left-10 lg:left-[3.75rem] h-full w-1 bg-white -z-10;
     content: "";
   }
   @screen md {

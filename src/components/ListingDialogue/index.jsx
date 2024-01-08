@@ -212,7 +212,7 @@ const ListingDialogue = ({ singleProduct, closeListingDialogue = () => {}, desig
             </div>
             <div className="flex-1 bg-[#6F6F6F] flex h-full gap-5 items-center justify-center">
               <label htmlFor="price">$</label>
-              <input type="number" placeholder="____.__" className=" w-[40%] text-left" />
+              <input type="number" placeholder="____.__" className=" w-[40%] text-left bg-transparent" />
             </div>
             <div className="flex-1 flex flex-col">
               <div className="flex justify-center items-center h-[50%] border-[1px] border-[#7B63AB]">
