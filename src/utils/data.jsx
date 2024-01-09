@@ -682,7 +682,8 @@ export const plans = [
     extra: 50,
     image: "/assets/images/booster-plan.png",
     price: 5.99,
-    price_id: "price_1OMsveFVH5IGSSzhazbPGp7n", // replace with ids from production
+    // price_id: "price_1OMsveFVH5IGSSzhazbPGp7n", 
+    price_id:'price_1OVCVxD8hSRNHIz932Bhsx2O',// replace with ids from production
     // href: "https://buy.stripe.com/test_6oE9AA2bEaJ02LC8wB",
     // href: "https://buy.stripe.com/test_dR67t74rH9tE1e8dQQ",
     delay: "200",
@@ -693,7 +694,8 @@ export const plans = [
     designs: 280,
     extra: 250,
     price: 24.99,
-    price_id: "price_1NagvgFVH5IGSSzhRqUd4OEJ", // replace with ids from production
+    // price_id: "price_1NagvgFVH5IGSSzhRqUd4OEJ", 
+    price_id: 'price_1ORqlqD8hSRNHIz90cYe9idU',// replace with ids from production
     image: "/assets/images/accelarator-plan.png",
     href: "https://buy.stripe.com/test_28o000bMeeZgdqg3ci",
     delay: "400",
