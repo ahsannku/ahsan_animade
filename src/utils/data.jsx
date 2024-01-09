@@ -683,7 +683,7 @@ export const plans = [
     image: "/assets/images/booster-plan.png",
     price: 5.99,
     // price_id: "price_1OMsveFVH5IGSSzhazbPGp7n", 
-    price_id:'price_1OWa1ED8hSRNHIz9WzJXERAX',// replace with ids from production
+    price_id:'price_1OWd9aFVH5IGSSzhLUs0H68T',//this is from live test
     // href: "https://buy.stripe.com/test_6oE9AA2bEaJ02LC8wB",
     // href: "https://buy.stripe.com/test_dR67t74rH9tE1e8dQQ",
     delay: "200",

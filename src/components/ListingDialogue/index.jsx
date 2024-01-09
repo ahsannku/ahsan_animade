@@ -164,7 +164,7 @@ const ListingDialogue = ({ singleProduct, closeListingDialogue = () => {}, desig
           </div>
 
           <div className="w-[70%] h-[162px] rounded-[20px] px-[20px] py-[5px] border-[3px] border-[#7B63AB] flex items-center justify-between ">
-            <div className="flex flex-col  w-[70%] items-start">
+            <div className="flex flex-col items-start">
               <label className="text-[20px] font-bold">Variants </label>
               <div className="h-[98px] flex flex-wrap mt-2 overflow-scroll">
                 {variants?.length > 0 &&  variants?.map((item, index) => (
@@ -185,7 +185,7 @@ const ListingDialogue = ({ singleProduct, closeListingDialogue = () => {}, desig
               </div>
             </div>
 
-            <div className="h-[124px] rounded-[20px] px-[10px] py-[5px] border border-[ #7B63AB]">
+            {/* <div className="h-[124px] rounded-[20px] px-[10px] py-[5px] border border-[ #7B63AB]">
               <div className="flex items-center justify-center">
                 <h4 className="text-[20px] font-normal">Sizes</h4>
               </div>
@@ -201,7 +201,7 @@ const ListingDialogue = ({ singleProduct, closeListingDialogue = () => {}, desig
                   <SelectComponent />
                 </div>
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
 

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useMemo } from "react";
 import { IoIosArrowBack } from "react-icons/io";
 import { useDispatch, useSelector } from "react-redux";
 import Input from "../Input";
@@ -11,6 +11,18 @@ import { useNavigate } from "react-router-dom";
 const EditListingDialogue = ({ singleProduct, setOpenModal, queuedProduct = null }) => {
   const [selectedVariants, setSelectedVariants] = useState([]);
   const [variantPrice, setVariantPrice] = useState("");
+  const [productPrice, setProductPrice] = useState("");
+  const profit = useMemo(() => {
+    const _productPrice = parseFloat(productPrice);
+    const _variantPrice = parseFloat(variantPrice);
+    if(isNaN(_productPrice) || isNaN(_variantPrice)){
+      return 0;
+    }
+    if(_variantPrice > _productPrice){
+      return 0;
+    }
+    return (_productPrice - _variantPrice).toFixed(2);
+  }, [productPrice, variantPrice]);
   const { product, variants } = singleProduct;
   const { image, title, type } = product;
   const queuedProducts = useSelector(state => state.printful?.queuedProducts ?? []);
@@ -107,7 +119,7 @@ const EditListingDialogue = ({ singleProduct, setOpenModal, queuedProduct = null
         </div>
 
         <h2 className="text-xl lg:text-[32px] ml-10 font-bold">
-          Create Your Listing
+          Edit Your Listing
         </h2>
       </div>
 
@@ -119,13 +131,13 @@ const EditListingDialogue = ({ singleProduct, setOpenModal, queuedProduct = null
             className="w-[30%] rounded-3xl border-[3px] border-[#7b63ab]"
           />
 
-          <div className="w-[70%] rounded-[20px] px-[20px] py-[10px] border-[3px] border-[#7B63AB]">
+          <div style={{overflowY:"scroll"}} className="w-[70%] rounded-[20px] px-[20px] py-[10px] border-[3px] border-[#7B63AB]">
             <div className="flex flex-col items-start">
               <label htmlFor="" className="">
-                Name
+                Title
               </label>
               <Input
-                placeholder="Item Name"
+                placeholder="Item title"
                 type="text"
                 className="text-left w-full"
                 onChange={(e) => inputChangeHandler(e, "itemName")}
@@ -138,7 +150,7 @@ const EditListingDialogue = ({ singleProduct, setOpenModal, queuedProduct = null
               <Input
               type='textarea'
                 placeholder="Provide a detailed description of your creation"
-                className="min-h-full"
+                className="!rounded-[10px] !min-h-[135px]"
                 onChange={(e) => inputChangeHandler(e, "desc")}
                 value = {data?.desc || ''}
               />
@@ -148,12 +160,12 @@ const EditListingDialogue = ({ singleProduct, setOpenModal, queuedProduct = null
 
         <div className="flex gap-5">
           <div className="h-[162px] w-[30%] flex flex-col px-6 justify-center rounded-[20px] border-[3px] border-[#7B63AB]">
-            <h2 className="text-xl lg:text-[20px] font-bold">{type}</h2>
-            <h4 className="text-sm lg:text-[20px]">{title}</h4>
+            <h2 className="text-xl lg:text-[20px] font-bold" style={{textTransform: 'capitalize'}}>{type?.toLowerCase()}</h2>
+            <h4 className="text-sm lg:text-[17px] font-normal">{title}</h4>
           </div>
 
           <div className="w-[70%] h-[162px] rounded-[20px] px-[20px] py-[5px] border-[3px] border-[#7B63AB] flex items-center justify-between ">
-            <div className="flex flex-col  w-[70%] items-start">
+            <div className="flex flex-col items-start">
               <label className="text-[20px] font-bold">Variants </label>
               <div className="h-[98px] flex flex-wrap mt-2 overflow-scroll">
                 {variants.map((item, index) => (
@@ -174,7 +186,7 @@ const EditListingDialogue = ({ singleProduct, setOpenModal, queuedProduct = null
               </div>
             </div>
 
-            <div className="h-[124px] rounded-[20px] px-[10px] py-[5px] border border-[ #7B63AB]">
+            {/* <div className="h-[124px] rounded-[20px] px-[10px] py-[5px] border border-[ #7B63AB]">
               <div className="flex items-center justify-center">
                 <h4 className="text-[20px] font-normal">Sizes</h4>
               </div>
@@ -190,7 +202,7 @@ const EditListingDialogue = ({ singleProduct, setOpenModal, queuedProduct = null
                   <SelectComponent />
                 </div>
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
 
@@ -213,14 +225,14 @@ const EditListingDialogue = ({ singleProduct, setOpenModal, queuedProduct = null
             </div>
             <div className="flex-1 bg-[#6F6F6F] flex h-full gap-5 items-center justify-center">
               <label htmlFor="price">$</label>
-              <input type="number" placeholder="____.__" className=" w-[40%] text-left" />
+              <input type="number" value={productPrice} onChange={(e) => setProductPrice(e.target.value)} placeholder="____.__" className=" w-[40%] text-left bg-transparent" />
             </div>
             <div className="flex-1 flex flex-col">
               <div className="flex justify-center items-center h-[50%] border-[1px] border-[#7B63AB]">
                 <h4 className="text-xl lg:text-[20px] font-bold">Profit Per Sale</h4>
               </div>
               <div className="flex justify-center items-center h-[50%]">
-                <h4>_____.__</h4>
+                <h4>{profit}</h4>
               </div>
             </div>
           </div>
