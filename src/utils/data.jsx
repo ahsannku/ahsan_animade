@@ -683,7 +683,7 @@ export const plans = [
     image: "/assets/images/booster-plan.png",
     price: 5.99,
     // price_id: "price_1OMsveFVH5IGSSzhazbPGp7n", 
-    price_id:'price_1OVCVxD8hSRNHIz932Bhsx2O',// replace with ids from production
+    price_id:'price_1OWa1ED8hSRNHIz9WzJXERAX',// replace with ids from production
     // href: "https://buy.stripe.com/test_6oE9AA2bEaJ02LC8wB",
     // href: "https://buy.stripe.com/test_dR67t74rH9tE1e8dQQ",
     delay: "200",
@@ -695,7 +695,7 @@ export const plans = [
     extra: 250,
     price: 24.99,
     // price_id: "price_1NagvgFVH5IGSSzhRqUd4OEJ", 
-    price_id: 'price_1ORqlqD8hSRNHIz90cYe9idU',// replace with ids from production
+    price_id: 'price_1OWa1hD8hSRNHIz9czrIV7lz',// replace with ids from production
     image: "/assets/images/accelarator-plan.png",
     href: "https://buy.stripe.com/test_28o000bMeeZgdqg3ci",
     delay: "400",
@@ -706,7 +706,8 @@ export const plans = [
     designs: 880,
     extra: 850,
     price: 49.99,
-    price_id: "price_1OMt5fFVH5IGSSzh0NV1EHyX", // replace with ids from production
+    // price_id: "price_1OMt5fFVH5IGSSzh0NV1EHyX",
+    price_id: 'price_1OWa25D8hSRNHIz9zQoEohNo',// replace with ids from production
     image: "/assets/images/Turbocharge-plan.png",
     href: "https://buy.stripe.com/test_dR6cMM9E62cu9a07sz",
     delay: "600",
@@ -717,7 +718,8 @@ export const plans = [
     designs: "unlimited",
     extra: "unlimited",
     price: 149.99,
-    price_id: "price_1NagyWFVH5IGSSzhy2KZtSnY", // replace with ids from production
+    // price_id: "price_1NagyWFVH5IGSSzhy2KZtSnY", 
+    price_id: "price_1OWa2TD8hSRNHIz9jh9QSHbj", // replace with ids from production
     image: "/assets/images/professional-plan.png",
     Professional: true,
     href: "https://buy.stripe.com/test_cN2dQQ9E62cu1Hy8wE",
